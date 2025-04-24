@@ -106,10 +106,7 @@ wsl -l -v
 
 4. After install, open Docker Desktop → **Settings** → **Resources** → **WSL Integration**, and enable your Ubuntu distro.
 
-5. Install NVIDIA GPU Driver with WSL2 Support  
-   Get the latest driver from [NVIDIA Downloads](https://www.nvidia.com/download).
-
-6. Install NVIDIA Container Toolkit in WSL2
+5. Install NVIDIA Container Toolkit in WSL2
 ```bash
 sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
@@ -118,7 +115,7 @@ sudo systemctl restart docker || echo "If this fails, restart Docker Desktop man
 wsl --shutdown
 ```
 
-7. Verify GPU in Docker
+6. Verify GPU in Docker
 ```bash
 docker run --gpus all nvidia/cuda:12.2.0-base-ubuntu20.04 nvidia-smi
 ```
