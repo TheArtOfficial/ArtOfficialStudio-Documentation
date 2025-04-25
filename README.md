@@ -138,7 +138,7 @@ docker login ghcr.io -u YOUR_GITHUB_USERNAME -p YOUR_GITHUB_TOKEN
 
 Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 
-**First Time Setup Ends Here**
+## First Time Setup Ends Here
 
 ---
 
