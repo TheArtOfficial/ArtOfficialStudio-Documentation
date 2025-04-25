@@ -66,8 +66,10 @@ To access my private container image hosted on GitHub Container Registry (GHCR),
 5. Give it a name like Docker Access
 6. Set expiration date (optional)
 7. Under scopes, check: **read:packages** and **repo (all checkboxes)**
-8. Click **Generate Token**
-9. Copy and save your token securely. You won't be able to see it again!
+![Screenshot from 2025-04-25 19-32-31](https://github.com/user-attachments/assets/f1703f90-0b3b-4471-b7c8-782fe54dce51)
+
+9. Click **Generate Token**
+10. Copy and save your token securely. You won't be able to see it again!
 
 ---
 
