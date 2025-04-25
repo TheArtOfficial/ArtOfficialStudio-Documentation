@@ -265,8 +265,34 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 ### Paperspace Installation
 
 ## 1. **Connect Paperspace to GitHubRegistry**
+- Click on your profile in the top right and select "Team Settings"
+ ![image](https://github.com/user-attachments/assets/136ba2af-8df7-434a-bb9a-5976d89319ae)
+- Go to the "Containers" Tab, select the "GitHub Container Registry" from the dropdown, and hit "NEXT"
+![image](https://github.com/user-attachments/assets/61b6359e-2ff7-4112-892b-e29c96491c45)
+- Fill out the info as shown below. Hit "Test Connection" to make sure your access to the github repo is available
+![image](https://github.com/user-attachments/assets/c2420a5d-0346-4dd6-8b4e-2841555af76f)
+
 ## 2. **Deploy Container on GPU of Choice**
+- Select which GPU to deploy in the dropdown.
+- Give the container a nickname
+- Select "Private container registry"
+- Select the Container Registry you set up in the previous step
+- use the docker image that is compatible with your GPU
+`ghcr.io/theartofficial/artofficialstudio:latest`  
+`ghcr.io/theartofficial/artofficialstudio:cu126latest`
+`ghcr.io/theartofficial/artofficialstudio:cu125latest`
+![image](https://github.com/user-attachments/assets/56f2c98a-b8b0-4b2f-93df-66400fb1a519)
+
+- Make sure port 80 is exposed, then click "DEPLOY"
+![image](https://github.com/user-attachments/assets/74ea9b96-a6d5-4b0b-a2da-703a30a342b4)
+
+
 ## 3. **Connect to Application Link**
+- Once you see tensorboard messages at the end of the log, your instance is ready to go!
+![Screenshot from 2025-04-25 13-19-28](https://github.com/user-attachments/assets/98f47462-a36a-4886-a7f7-3e969eb199eb)
+- From the console dashboard, click the "Endpoint" Link, and you will be connected to the App Links page of the application!
+![image](https://github.com/user-attachments/assets/68e28f57-103c-48d9-982f-f0df5509c25a)
+
 
 ---
 
