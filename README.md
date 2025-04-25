@@ -209,7 +209,6 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
    - **Registry Credentials:** Ensure you enter your GitHub username and token to authenticate the container.
    - Select your credentials from the dropdown list after creating them.
    - Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
-
 ![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
 
 
@@ -225,7 +224,8 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 7. **Deploy the Pod:**
    - Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
    - Ensure you have the correct filter settings for the pod:
-   ![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
+![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
+
    - Select the GPU (For this example, we use a 5090).
      - For most workflows, **16GB of VRAM** is sufficient. Some might require **24GB**, especially for 720p video generation.
    - Choose **Change Template** and select the template created earlier.
@@ -242,7 +242,7 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 ![Screenshot from 2025-04-24 07-14-34](https://github.com/user-attachments/assets/e87e1d8f-ba3c-4508-871b-576617aa2d32)
 
 10. **Connect:**
-   - Once everything is working, the **Connect** button will become active. Click it to access your container.
+    - Once everything is working, the **Connect** button will become active. Click it to access your container.
 ![Screenshot from 2025-04-24 07-18-33](https://github.com/user-attachments/assets/06c41b13-38c5-4fc3-8ecb-106f740bd15a)
 
 11. **Connect to port 80:**
@@ -268,19 +268,25 @@ After deployment, you can access ArtOfficial Studio via the following ports on y
    Runpod Connect to port 80
    Paperspace: just navigate to the url provided by the by Paperspace.
 
+   App links provides all of the connections to other services maintained by the app
+![image](https://github.com/user-attachments/assets/b4ba566a-99e2-4496-8dea-0f30cbff842b)
+
+
   **Model Downloader Tab:**  
    The **Model Downloader** tab allows you to select and download models straight into the correct folder for **ComfyUI**. Once downloaded, Head to the "App Links" tab to access **ComfyUI**. Models should be automatically placed in the   correct directories.
+![Screenshot from 2025-04-25 11-02-51](https://github.com/user-attachments/assets/1f25722f-6ca8-4e84-a691-c11b5034574a)
+
 
   **Training Tools Tab:**  
    This tab provides tools to train LoRAs. Select a tool and hit install. The installation logs will appear in the **Installation Log** box. If any errors occur, you can send the logs for troubleshooting.
+![Screenshot from 2025-04-25 11-03-05](https://github.com/user-attachments/assets/df25ce90-4e43-48a7-b402-87fe279edd24)
 
   **CivitAI Downloader Tab:**  
    This feature allows you to download files from CivitAI. Simply provide the URL, model type, desired filename, and your CivitAI token, and it will automatically place the file in the right ComfyUI folder.
+![Screenshot from 2025-04-25 11-03-23](https://github.com/user-attachments/assets/80851482-7170-4b8b-9ac5-e949acd15730)
 
   **HuggingFace Downloader Tab:**  
    Similar to the CivitAI downloader, this tool allows you to download models from HuggingFace by providing the URL, download path, and optionally a HuggingFace token.
-
-  **Jupyter Lab Tab:**  
-   JupyterLab offers access to the entire container's filesystem. If you need more control over file management or need to edit Python scripts, this is the tool for you.
+![Screenshot from 2025-04-25 11-03-36](https://github.com/user-attachments/assets/530dd127-e771-4840-99d4-ce9285999249)
 
 ---
