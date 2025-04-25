@@ -21,27 +21,28 @@ No technical background? No worries. This guide is written to walk you through e
 5. Run the docker container with a volume mounted so data is stored even when the docker container is deleted  
 6. To pull the latest changes, delete the docker container (remember, all downloaded data is stored on the volume, so it won’t be deleted), and run the docker container again\!
 
-**Table of Contents**
-### Local Installation
-- [1. How to Create a GitHub Classic Token for Container Access](#1-how-to-create-a-github-classic-token-for-container-access)
-  - [Steps](#steps)
-- [2. What is Docker (Beginner Friendly)](#2-what-is-docker-beginner-friendly)
-- [3. How to Install Docker with GPU Support](#3-how-to-install-docker-with-gpu-support)
-  - [Windows (with WSL2 and NVIDIA GPU)](#windows-with-wsl2-and-nvidia-gpu)
-  - [Linux](#linux)
-- [4. How to Log in to Docker with GitHub Token](#4-how-to-log-in-to-docker-with-github-token)
-- [5. How to Run the ArtOfficial Studio Docker Image](#5-how-to-run-the-artofficial-studio-docker-image)
-- [6. Mounting a Volume Drive to Persist Data](#6-mounting-a-volume-drive-to-persist-data)
-- [7. How to Restart the Docker Image Without Losing Data](#7-how-to-restart-the-docker-image-without-losing-data)
+# 📘 Table of Contents
 
-### Runpod Installation
-- [8. How to Install the Container on a Cloud GPU with RunPod](#8-how-to-install-the-container-on-a-cloud-gpu-with-runpod)
+## 🛠️ Local Installation
+1. [How to Create a GitHub Classic Token for Container Access](#1-how-to-create-a-github-classic-token-for-container-access-one-time-setup-for-all-connection-methods)
+   - [Steps](#steps)
+2. [What is Docker? (Beginner Friendly)](#2-what-is-docker-beginner-friendly)
+3. [How to Install Docker with GPU Support](#3-how-to-install-docker-with-gpu-support-one-time-setup)
+   - [Windows (WSL2 + NVIDIA)](#windows-with-wsl2-and-nvidia-gpu)
+   - [Linux](#linux)
+4. [How to Log in to Docker with GitHub Token](#4-how-to-log-in-to-docker-with-github-token-one-time-setup)
+5. [How to Run the ArtOfficial Studio Docker Image](#5-how-to-run-the-artofficial-studio-docker-image)
+6. [Mounting a Volume Drive to Persist Data](#6-mounting-a-volume-drive-to-persist-data)
+7. [How to Restart the Docker Image Without Losing Data](#7-how-to-restart-the-docker-image-without-losing-data)
 
-### Using ArtOfficial Studio
-- [9. Using the Home Page](#9-using-the-home-page)
-- [10. Training Tools](#10-training-tools)
-- [11. CivitAI Downloader](#11-civitai-downloader)
-- [12. HuggingFace Downloader](#12-huggingface-downloader)
+## ☁️ RunPod Installation
+8. [How to Install the Container on a Cloud GPU with RunPod](#8-how-to-install-the-container-on-a-cloud-gpu-with-runpod-process-for-other-cloud-services-should-be-similar)
+
+## 🧠 Using ArtOfficial Studio
+9. [Using the Home Page](#9-using-the-home-page)
+10. [Training Tools](#10-training-tools)
+11. [CivitAI Downloader](#11-civitai-downloader)
+12. [HuggingFace Downloader](#12-huggingface-downloader)
 
 ---
 
@@ -196,14 +197,14 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 
 **Steps:**
 
-1. **Go to RunPod:**
+## 1. Go to RunPod:
    - Sign in to your account at [RunPod.io](https://runpod.io).
 
-2. **Create a New Template:**
+## 2. **Create a New Template:**
    - Navigate to **My Templates** and click **+ New Template**.
 ![Screenshot from 2025-04-23 18-04-15](https://github.com/user-attachments/assets/684e9fee-0852-4072-a37a-5a5783ab6467)
 
-3. **Create the Template:**
+## 3. **Create the Template:**
    - In the template settings, select **"Docker Image"** and paste the following image URL (replace with cu126 version if necessary):
      ```bash
      ghcr.io/theartofficial/artofficialstudio:latest
@@ -214,16 +215,16 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 ![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
 
 
-5. **Save the Template:**
+## 5. **Save the Template:**
    - Click **Save Template** once everything is correct.
 
-6. **Optional - Create a Network Volume:**
+## 6. **Optional - Create a Network Volume:**
    - This step is not necessary but is highly recommended to avoid redownloading files every time.
    - Navigate to **Storage** in the left menu.
    - Choose the options that best suit you. The **Europe datacenter** tends to have the best performance, but select what works best for you.
 ![Screenshot from 2025-04-24 07-01-50](https://github.com/user-attachments/assets/41e459fb-486a-4b66-89f0-177a0d2e0b2f)
 
-7. **Deploy the Pod:**
+## 7. **Deploy the Pod:**
    - Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
    - Ensure you have the correct filter settings for the pod:
 ![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
@@ -234,34 +235,34 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 ![Screenshot from 2025-04-24 07-09-20](https://github.com/user-attachments/assets/823c81fe-6596-44fa-8525-33b372bd7f44)
 
 
-8. **Deploy On-Demand:**
+## 8. **Deploy On-Demand:**
    - Click **Deploy On-Demand**. You should see the logs start to run.
    - If you encounter an error such as "No container found," this may indicate a network or setup issue with the pod.
 
-9. **Verify Logs:**
+## 9. **Verify Logs:**
    - Once successful, your system logs should indicate that everything is running, and you'll see messages like “downloading ------” if it’s your first time using the template.
    - If you see an "unauthorized" error, this means the credentials are incorrect or access hasn't been granted yet.
 ![Screenshot from 2025-04-24 07-14-34](https://github.com/user-attachments/assets/e87e1d8f-ba3c-4508-871b-576617aa2d32)
 
-10. **Connect:**
+## 10. **Connect:**
     - Once everything is working, the **Connect** button will become active. Click it to access your container.
 ![Screenshot from 2025-04-24 07-18-33](https://github.com/user-attachments/assets/06c41b13-38c5-4fc3-8ecb-106f740bd15a)
 
-11. **Connect to port 80:**
+## 11. **Connect to port 80:**
     - The app runs on port 80, so click that and the front-end UI will open.
 
 By following these steps, you’ll have a fully working setup with the ArtOfficial Studio container running on your RunPod cloud GPU!
 
 ---
 
-## Paperspace Installation
+### Paperspace Installation
 
-1. **Connect to GitHubRegistry**
-2. 
+## 1. **Connect to GitHubRegistry**
+
 
 ---
 
-### 9. Using ArtOfficial Studio
+### Using ArtOfficial Studio
    **To launch ArtOfficial Studio:**
    
    Local: Navigate to `http://localhost:80/`
