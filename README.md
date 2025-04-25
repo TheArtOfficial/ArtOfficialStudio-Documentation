@@ -66,12 +66,12 @@ To access my private container image hosted on GitHub Container Registry (GHCR),
 
 ## First Time Setup starts here
 
-If your Nvidia Driver does not support cu128, there is a cu126 version available as well! Just swap  
+If your Nvidia Driver does not support cu128, there is a cu126 and cuda125 version as well, if you need a different cuda version, please let me know! Not too difficult to create a new image.
 `ghcr.io/theartofficial/artofficialstudio:latest`  
-for  
 `ghcr.io/theartofficial/artofficialstudio:cu126latest`
+`ghcr.io/theartofficial/artofficialstudio:cu125latest`
 
-Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 version should work the same.
+Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 or cu125 version should work the same.
 
 ---
 
@@ -186,7 +186,7 @@ You're all set! Dive into ArtOfficial Studio and explore the frontier of AI crea
 
 ## Runpod Installation
 
-If your pod's driver does not support cu128, there is a cu126 version available. Simply swap `ghcr.io/theartofficial/artofficialstudio:latest` for `ghcr.io/theartofficial/artofficialstudio:cu126latest`. For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are backward compatible, it's generally a good idea to update to the latest version that supports the newest CUDA version.
+If your pod's driver does not support cu128, there is a cu126 version available. Simply swap `ghcr.io/theartofficial/artofficialstudio:latest` for `ghcr.io/theartofficial/artofficialstudio:cu126latest` or `ghcr.io/theartofficial/artofficialstudio:cu125latest`. For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are backward compatible, it's generally a good idea to update to the latest version that supports the newest CUDA version.
 
 ---
 
@@ -263,8 +263,8 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 ### 9. Using ArtOfficial Studio
    **To launch ArtOfficial Studio:**
-   Navigate to `http://localhost:80/` for the main dashboard 
-   Runpod Connect to port 80
+   Local: Navigate to `http://localhost:80/`
+   Runpod: Connect to port 80
    Paperspace: just navigate to the url provided by the by Paperspace.
 
   **App Links:**  
