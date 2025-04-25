@@ -36,14 +36,14 @@ No technical background? No worries. This guide is written to walk you through e
 7. [How to Restart the Docker Image Without Losing Data](#-how-to-restart-the-docker-image-without-losing-data)
 
 ## RunPod Cloud GPU Installation
-8. [Create a New Template](create-a-new-template)
-9. [Optional - Create a Network Volume](optional-create-a-network-volume)
-10. [Deploy the Pod](deploy-the-pod)
+8. [Create a New Template](#create-a-new-template)
+9. [Optional - Create a Network Volume](#optional-create-a-network-volume)
+10. [Deploy the Pod](#deploy-the-pod)
     
 ## Paperspace Cloud GPU Installation
-11. [Connect Paperspace to GitHubRegistry](connect-paperspace-to-githubregistry)
-12. [Deploy Container on GPU of Choice](deploy-container-on-gpu-of-choice)
-13. [Connect to Application Link](connect-to-application-lin)
+11. [Connect Paperspace to GitHubRegistry](#connect-paperspace-to-githubregistry)
+12. [Deploy Container on GPU of Choice](#deploy-container-on-gpu-of-choice)
+13. [Connect to Application Link](#connect-to-application-lin)
 
 ## Using ArtOfficial Studio
 14. [Using the Home Page](#app-links)
