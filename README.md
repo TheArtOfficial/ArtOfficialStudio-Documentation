@@ -270,7 +270,8 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 - Go to the "Containers" Tab, select the "GitHub Container Registry" from the dropdown, and hit "NEXT"
 ![image](https://github.com/user-attachments/assets/61b6359e-2ff7-4112-892b-e29c96491c45)
 - Fill out the info as shown below. Hit "Test Connection" to make sure your access to the github repo is available
-![image](https://github.com/user-attachments/assets/f506ef5d-56b9-4aff-b2fe-e09192b16496)
+![image](https://github.com/user-attachments/assets/92d28af2-544c-467f-bbb7-ef8de10b5777)
+
 
 
 ## 2. **Deploy Container on GPU of Choice**
