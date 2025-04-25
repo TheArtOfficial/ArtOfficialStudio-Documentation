@@ -260,13 +260,12 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 ---
 
 ### 9. Using ArtOfficial Studio
-
-After deployment, you can access ArtOfficial Studio via the following ports on your local instance:
-
-  **App Links:**  
+   **To launch ArtOfficial Studio:**
    Navigate to `http://localhost:80/` for the main dashboard 
    Runpod Connect to port 80
    Paperspace: just navigate to the url provided by the by Paperspace.
+
+  **App Links:**  
 
    App links provides all of the connections to other services maintained by the app
 ![image](https://github.com/user-attachments/assets/b4ba566a-99e2-4496-8dea-0f30cbff842b)
