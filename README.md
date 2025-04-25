@@ -41,16 +41,16 @@ No technical background? No worries. This guide is written to walk you through e
 10. [Deploy the Pod](#7-deploy-the-pod)
     
 ## Paperspace Cloud GPU Installation
-11. [Connect Paperspace to GitHubRegistry](#connect-paperspace-to-githubregistry)
-12. [Deploy Container on GPU of Choice](#deploy-container-on-gpu-of-choice)
-13. [Connect to Application Link](#connect-to-application-lin)
+11. [Connect Paperspace to GitHubRegistry](#1-connect-paperspace-to-githubregistry)
+12. [Deploy Container on GPU of Choice](#2-deploy-container-on-gpu-of-choice)
+13. [Connect to Application Link](#3-connect-to-application-lin)
 
 ## Using ArtOfficial Studio
 14. [Using the Home Page](#app-links)
 15. [Model Downloader](#model-downloader-tab)
 16. [Training Tools](#training-tools-tab)
-17. [CivitAI Downloader](#civitai-downloader)
-18. [HuggingFace Downloader](#huggingface-downloader)
+17. [CivitAI Downloader](#civitai-downloader-tab)
+18. [HuggingFace Downloader](#huggingface-downloader-tab)
 
 ---
 
@@ -271,7 +271,7 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 ---
 
 ### Using ArtOfficial Studio
-   **To launch ArtOfficial Studio:**
+## To launch ArtOfficial Studio:
    
    Local: Navigate to `http://localhost:80/`
    
@@ -279,26 +279,23 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
    
    Paperspace: just navigate to the url provided by the by Paperspace.
 
-  **App Links:**  
-
+## App Links  
    App links provides all of the connections to other services maintained by the app
 ![image](https://github.com/user-attachments/assets/b4ba566a-99e2-4496-8dea-0f30cbff842b)
 
-
-  **Model Downloader Tab:**  
+## Model Downloader Tab
    The **Model Downloader** tab allows you to select and download models straight into the correct folder for **ComfyUI**. Once downloaded, Head to the "App Links" tab to access **ComfyUI**. Models should be automatically placed in the   correct directories.
 ![Screenshot from 2025-04-25 11-02-51](https://github.com/user-attachments/assets/1f25722f-6ca8-4e84-a691-c11b5034574a)
 
-
-  **Training Tools Tab:**  
+## Training Tools Tab  
    This tab provides tools to train LoRAs. Select a tool and hit install. The installation logs will appear in the **Installation Log** box. If any errors occur, you can send the logs for troubleshooting.
 ![Screenshot from 2025-04-25 11-03-05](https://github.com/user-attachments/assets/df25ce90-4e43-48a7-b402-87fe279edd24)
 
-  **CivitAI Downloader Tab:**  
+## CivitAI Downloader Tab
    This feature allows you to download files from CivitAI. Simply provide the URL, model type, desired filename, and your CivitAI token, and it will automatically place the file in the right ComfyUI folder.
 ![Screenshot from 2025-04-25 11-03-23](https://github.com/user-attachments/assets/80851482-7170-4b8b-9ac5-e949acd15730)
 
-  **HuggingFace Downloader Tab:**  
+## HuggingFace Downloader Tab:  
    Similar to the CivitAI downloader, this tool allows you to download models from HuggingFace by providing the URL, download path, and optionally a HuggingFace token.
 ![Screenshot from 2025-04-25 11-03-36](https://github.com/user-attachments/assets/530dd127-e771-4840-99d4-ce9285999249)
 
