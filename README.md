@@ -23,22 +23,25 @@ No technical background? No worries. This guide is written to walk you through e
 
 # 📘 Table of Contents
 
-## 🛠️ Local Installation
-1. [How to Create a GitHub Classic Token for Container Access](#1-how-to-create-a-github-classic-token-for-container-access-one-time-setup-for-all-connection-methods)
+## Local Installation
+1. [How to Create a GitHub Classic Token for Container Access](#how-to-create-a-github-classic-token-for-container-access-one-time-setup-for-all-connection-methods)
    - [Steps](#steps)
-2. [What is Docker? (Beginner Friendly)](#2-what-is-docker-beginner-friendly)
-3. [How to Install Docker with GPU Support](#3-how-to-install-docker-with-gpu-support-one-time-setup)
+2. [What is Docker? (Beginner Friendly)](#what-is-docker-beginner-friendly)
+3. [How to Install Docker with GPU Support](#how-to-install-docker-with-gpu-support-one-time-setup)
    - [Windows (WSL2 + NVIDIA)](#windows-with-wsl2-and-nvidia-gpu)
    - [Linux](#linux)
-4. [How to Log in to Docker with GitHub Token](#4-how-to-log-in-to-docker-with-github-token-one-time-setup)
-5. [How to Run the ArtOfficial Studio Docker Image](#5-how-to-run-the-artofficial-studio-docker-image)
-6. [Mounting a Volume Drive to Persist Data](#6-mounting-a-volume-drive-to-persist-data)
-7. [How to Restart the Docker Image Without Losing Data](#7-how-to-restart-the-docker-image-without-losing-data)
+4. [How to Log in to Docker with GitHub Token](#how-to-log-in-to-docker-with-github-token-one-time-setup)
+5. [How to Run the ArtOfficial Studio Docker Image](#how-to-run-the-artofficial-studio-docker-image)
+6. [Mounting a Volume Drive to Persist Data](#-mounting-a-volume-drive-to-persist-data)
+7. [How to Restart the Docker Image Without Losing Data](#-how-to-restart-the-docker-image-without-losing-data)
 
-## ☁️ RunPod Installation
-8. [How to Install the Container on a Cloud GPU with RunPod](#8-how-to-install-the-container-on-a-cloud-gpu-with-runpod-process-for-other-cloud-services-should-be-similar)
+## RunPod Installation
+8. [How to Install the Container on a Cloud GPU with RunPod](#how-to-install-the-container-on-a-cloud-gpu-with-runpod-process-for-other-cloud-services-should-be-similar)
 
-## 🧠 Using ArtOfficial Studio
+## Paperspace Installation
+
+
+## Using ArtOfficial Studio
 9. [Using the Home Page](#9-using-the-home-page)
 10. [Training Tools](#10-training-tools)
 11. [CivitAI Downloader](#11-civitai-downloader)
@@ -46,7 +49,7 @@ No technical background? No worries. This guide is written to walk you through e
 
 ---
 
-## 1. How to Create a GitHub Classic Token for Container Access (One-time setup for all connection methods)
+## How to Create a GitHub Classic Token for Container Access (One-time setup for all connection methods)
 
 To access my private container image hosted on GitHub Container Registry (GHCR), you need a GitHub Classic Token. DM me your GitHub username once you have a token, and I will give you access.
 
@@ -76,7 +79,7 @@ Nvidia 50xx series requires cu128, which is why that is my official release. Dri
 
 ---
 
-## 2. What is Docker? (Beginner Friendly)
+## What is Docker? (Beginner Friendly)
 
 Docker is like a virtual box that runs software in isolated environments called containers. These containers come pre-packaged with all dependencies.
 
@@ -87,7 +90,7 @@ Think of it like this:
 
 ---
 
-## 3. How to Install Docker with GPU Support (One-time setup)
+## How to Install Docker with GPU Support (One-time setup)
 
 ### Windows (with WSL2 and NVIDIA GPU)
 [Video tutorial: Installing Nvidia-Docker On Windows 10/11](https://www.youtube.com/watch?v=FwOsSscx_98)
@@ -161,7 +164,7 @@ http://localhost:80
 
 ---
 
-## 6. Mounting a Volume Drive to Persist Data
+## Mounting a Volume Drive to Persist Data
 
 Use the same run command (above), but make sure your path is correct:
 ```bash
@@ -172,7 +175,7 @@ This saves everything to your local drive.
 
 ---
 
-## 7. How to Restart the Docker Image Without Losing Data
+## How to Restart the Docker Image Without Losing Data
 
 Clean up:
 ```bash
@@ -185,17 +188,16 @@ You're all set! Dive into ArtOfficial Studio and explore the frontier of AI crea
 
 ---
 
-## Runpod Installation
+### Runpod Installation
 
 If your pod's driver does not support cu128, there is a cu126 version available. Simply swap `ghcr.io/theartofficial/artofficialstudio:latest` for `ghcr.io/theartofficial/artofficialstudio:cu126latest` or `ghcr.io/theartofficial/artofficialstudio:cu125latest`. For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are backward compatible, it's generally a good idea to update to the latest version that supports the newest CUDA version.
 
 ---
 
-### 8. How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
+## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
 A note before we get started: **4090 GPUs on RunPod** have been unreliable recently, with some lacking Nvidia drivers or having connection issues when pulling Docker images. I recommend avoiding these for now until issues are resolved. On the other hand, **5090 GPUs** have worked flawlessly with this setup!
 
-**Steps:**
 
 ## 1. Go to RunPod:
    - Sign in to your account at [RunPod.io](https://runpod.io).
