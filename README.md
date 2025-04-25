@@ -224,32 +224,45 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
      ```
    - **Registry Credentials:** Ensure you enter your GitHub username and token to authenticate the container.
    - Select your credentials from the dropdown list after creating them.
+   - Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
 
-4. **Save the Template:**
+![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
+
+
+5. **Save the Template:**
    - Click **Save Template** once everything is correct.
 
-5. **Optional - Create a Network Volume:**
+6. **Optional - Create a Network Volume:**
    - This step is not necessary but is highly recommended to avoid redownloading files every time.
    - Navigate to **Storage** in the left menu.
    - Choose the options that best suit you. The **Europe datacenter** tends to have the best performance, but select what works best for you.
 
-6. **Deploy the Pod:**
+7. **Deploy the Pod:**
    - Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
    - Ensure you have the correct filter settings for the pod:
      - Select the GPU (For this example, we use a 5090).
      - For most workflows, **16GB of VRAM** is sufficient. Some might require **24GB**, especially for 720p video generation.
      - Choose **Change Template** and select the template created earlier.
 
-7. **Deploy On-Demand:**
+8. **Deploy On-Demand:**
    - Click **Deploy On-Demand**. You should see the logs start to run.
    - If you encounter an error such as "No container found," this may indicate a network or setup issue with the pod.
 
-8. **Verify Logs:**
+9. **Verify Logs:**
    - Once successful, your system logs should indicate that everything is running, and you'll see messages like “downloading ------” if it’s your first time using the template.
    - If you see an "unauthorized" error, this means the credentials are incorrect or access hasn't been granted yet.
 
-9. **Connect:**
+10. **Connect:**
    - Once everything is working, the **Connect** button will become active. Click it to access your container.
+
+By following these steps, you’ll have a fully working setup with the ArtOfficial Studio container running on your RunPod cloud GPU!
+
+---
+
+## Paperspace Installation
+
+1. **Connect to GitHubRegistry**
+2. 
 
 ---
 
@@ -258,7 +271,7 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 After deployment, you can access ArtOfficial Studio via the following ports on your local instance:
 
 1. **Home Page:**  
-   Navigate to `http://localhost:5000/` for the main dashboard.
+   Navigate to `http://localhost:80/` for the main dashboard (Or port 80 if using Runpod).
 
 2. **Model Downloader:**  
    The **Model Downloader** tab allows you to select and download models straight into the correct folder for **ComfyUI**. Once downloaded, open port **8188** (or navigate to `0.0.0.0:8188`) to access **ComfyUI**. Models should be automatically placed in the correct directories.
@@ -276,5 +289,3 @@ After deployment, you can access ArtOfficial Studio via the following ports on y
    JupyterLab offers access to the entire container's filesystem. If you need more control over file management or need to edit Python scripts, this is the tool for you.
 
 ---
-
-By following these steps, you’ll have a fully working setup with the ArtOfficial Studio container running on your RunPod cloud GPU!
