@@ -146,28 +146,15 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 docker run \
   --gpus all \
   -it --rm \
-  -p 5000:5000 \
-  -p 6000:6000 \
-  -p 7000:7000 \
-  -p 6006:6006 \
-  -p 8188:8188 \
-  -p 8888:8888 \
+  -p 80:80 \
   -v C:/PathOnYourPCToStoreFiles:/workspace \
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
 Replace the path with your actual folder location.
 
-### Port Reference
-- 5000 → ArtOfficial Studio Splash Page
-- 6000 → Flux Gym
-- 7000 → Diffusion-Pipe UI
-- 8188 → ComfyUI
-- 8888 → JupyterLab
-- 6006 → TensorBoard (for LoRA training)
-
 Access via browser:  
-http://0.0.0.0:PORT
+http://localhost:80
 
 ---
 
@@ -195,10 +182,6 @@ You're all set! Dive into ArtOfficial Studio and explore the frontier of AI crea
 
 ---
 
-Sure! Here's the revised "Runpod Installation" section based on your request:
-
----
-
 ## Runpod Installation
 
 If your pod's driver does not support cu128, there is a cu126 version available. Simply swap `ghcr.io/theartofficial/artofficialstudio:latest` for `ghcr.io/theartofficial/artofficialstudio:cu126latest`. For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are backward compatible, it's generally a good idea to update to the latest version that supports the newest CUDA version.
@@ -216,6 +199,7 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 
 2. **Create a New Template:**
    - Navigate to **My Templates** and click **+ New Template**.
+![Screenshot from 2025-04-23 18-04-15](https://github.com/user-attachments/assets/684e9fee-0852-4072-a37a-5a5783ab6467)
 
 3. **Create the Template:**
    - In the template settings, select **"Docker Image"** and paste the following image URL (replace with cu126 version if necessary):
@@ -236,13 +220,17 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
    - This step is not necessary but is highly recommended to avoid redownloading files every time.
    - Navigate to **Storage** in the left menu.
    - Choose the options that best suit you. The **Europe datacenter** tends to have the best performance, but select what works best for you.
+![Screenshot from 2025-04-24 07-01-50](https://github.com/user-attachments/assets/41e459fb-486a-4b66-89f0-177a0d2e0b2f)
 
 7. **Deploy the Pod:**
    - Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
    - Ensure you have the correct filter settings for the pod:
-     - Select the GPU (For this example, we use a 5090).
+   ![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
+   - Select the GPU (For this example, we use a 5090).
      - For most workflows, **16GB of VRAM** is sufficient. Some might require **24GB**, especially for 720p video generation.
-     - Choose **Change Template** and select the template created earlier.
+   - Choose **Change Template** and select the template created earlier.
+![Screenshot from 2025-04-24 07-09-20](https://github.com/user-attachments/assets/823c81fe-6596-44fa-8525-33b372bd7f44)
+
 
 8. **Deploy On-Demand:**
    - Click **Deploy On-Demand**. You should see the logs start to run.
@@ -251,9 +239,14 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 9. **Verify Logs:**
    - Once successful, your system logs should indicate that everything is running, and you'll see messages like “downloading ------” if it’s your first time using the template.
    - If you see an "unauthorized" error, this means the credentials are incorrect or access hasn't been granted yet.
+![Screenshot from 2025-04-24 07-14-34](https://github.com/user-attachments/assets/e87e1d8f-ba3c-4508-871b-576617aa2d32)
 
 10. **Connect:**
    - Once everything is working, the **Connect** button will become active. Click it to access your container.
+![Screenshot from 2025-04-24 07-18-33](https://github.com/user-attachments/assets/06c41b13-38c5-4fc3-8ecb-106f740bd15a)
+
+11. **Connect to port 80:**
+    - The app runs on port 80, so click that and the front-end UI will open.
 
 By following these steps, you’ll have a fully working setup with the ArtOfficial Studio container running on your RunPod cloud GPU!
 
@@ -270,22 +263,24 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 After deployment, you can access ArtOfficial Studio via the following ports on your local instance:
 
-1. **Home Page:**  
-   Navigate to `http://localhost:80/` for the main dashboard (Or port 80 if using Runpod).
+  **App Links:**  
+   Navigate to `http://localhost:80/` for the main dashboard 
+   Runpod Connect to port 80
+   Paperspace: just navigate to the url provided by the by Paperspace.
 
-2. **Model Downloader:**  
-   The **Model Downloader** tab allows you to select and download models straight into the correct folder for **ComfyUI**. Once downloaded, open port **8188** (or navigate to `0.0.0.0:8188`) to access **ComfyUI**. Models should be automatically placed in the correct directories.
+  **Model Downloader Tab:**  
+   The **Model Downloader** tab allows you to select and download models straight into the correct folder for **ComfyUI**. Once downloaded, Head to the "App Links" tab to access **ComfyUI**. Models should be automatically placed in the   correct directories.
 
-3. **Training Tools:**  
+  **Training Tools Tab:**  
    This tab provides tools to train LoRAs. Select a tool and hit install. The installation logs will appear in the **Installation Log** box. If any errors occur, you can send the logs for troubleshooting.
 
-4. **CivitAI Downloader:**  
+  **CivitAI Downloader Tab:**  
    This feature allows you to download files from CivitAI. Simply provide the URL, model type, desired filename, and your CivitAI token, and it will automatically place the file in the right ComfyUI folder.
 
-5. **HuggingFace Downloader:**  
+  **HuggingFace Downloader Tab:**  
    Similar to the CivitAI downloader, this tool allows you to download models from HuggingFace by providing the URL, download path, and optionally a HuggingFace token.
 
-6. **Jupyter Lab (Port 8888):**  
+  **Jupyter Lab Tab:**  
    JupyterLab offers access to the entire container's filesystem. If you need more control over file management or need to edit Python scripts, this is the tool for you.
 
 ---
