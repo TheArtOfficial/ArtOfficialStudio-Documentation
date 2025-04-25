@@ -43,20 +43,9 @@ No technical background? No worries. This guide is written to walk you through e
 - [11. CivitAI Downloader](#11-civitai-downloader)
 - [12. HuggingFace Downloader](#12-huggingface-downloader)
 
-# Local Installation
-
-## First Time Setup starts here
-
-If your Nvidia Driver does not support cu128, there is a cu126 version available as well! Just swap  
-`ghcr.io/theartofficial/artofficialstudio:latest`  
-for  
-`ghcr.io/theartofficial/artofficialstudio:cu126latest`
-
-Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 version should work the same.
-
 ---
 
-## 1. How to Create a GitHub Classic Token for Container Access (One-time setup)
+## 1. How to Create a GitHub Classic Token for Container Access (One-time setup for all connection methods)
 
 To access my private container image hosted on GitHub Container Registry (GHCR), you need a GitHub Classic Token. DM me your GitHub username once you have a token, and I will give you access.
 
@@ -70,6 +59,19 @@ To access my private container image hosted on GitHub Container Registry (GHCR),
 7. Under scopes, check: read:packages
 8. Click **Generate Token**
 9. Copy and save your token securely. You won't be able to see it again!
+
+---
+
+# Local Installation
+
+## First Time Setup starts here
+
+If your Nvidia Driver does not support cu128, there is a cu126 version available as well! Just swap  
+`ghcr.io/theartofficial/artofficialstudio:latest`  
+for  
+`ghcr.io/theartofficial/artofficialstudio:cu126latest`
+
+Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 version should work the same.
 
 ---
 
