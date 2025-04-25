@@ -195,10 +195,16 @@ You're all set! Dive into ArtOfficial Studio and explore the frontier of AI crea
 
 ### Runpod Installation
 
-If your pod's driver does not support cu128, there is a cu126 version available. Simply swap `ghcr.io/theartofficial/artofficialstudio:latest` 
-for one of the following
+If your pod's driver does not support cu128, there is a cu126 version available. Simply swap 
+
+`ghcr.io/theartofficial/artofficialstudio:latest` 
+
+for one of the following:
+
 `ghcr.io/theartofficial/artofficialstudio:cu126latest` 
+
 `ghcr.io/theartofficial/artofficialstudio:cu125latest` 
+
 For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are mostly backward compatible for modern hardware, it's generally a good idea to update to the latest version that supports the newest CUDA version.
 
 ---
