@@ -22,10 +22,10 @@ No technical background? No worries. This guide is written to walk you through e
 6. To pull the latest changes, delete the docker container (remember, all downloaded data is stored on the volume, so it won’t be deleted), and run the docker container again\!
 
 # 📘 Table of Contents
-
-## Local Installation
 1. [How to Create a GitHub Classic Token for Container Access](#how-to-create-a-github-classic-token-for-container-access-one-time-setup-for-all-connection-methods)
    - [Steps](#steps)
+     
+## Local Installation
 2. [What is Docker? (Beginner Friendly)](#what-is-docker-beginner-friendly)
 3. [How to Install Docker with GPU Support](#how-to-install-docker-with-gpu-support-one-time-setup)
    - [Windows (WSL2 + NVIDIA)](#windows-with-wsl2-and-nvidia-gpu)
@@ -35,17 +35,22 @@ No technical background? No worries. This guide is written to walk you through e
 6. [Mounting a Volume Drive to Persist Data](#-mounting-a-volume-drive-to-persist-data)
 7. [How to Restart the Docker Image Without Losing Data](#-how-to-restart-the-docker-image-without-losing-data)
 
-## RunPod Installation
-8. [How to Install the Container on a Cloud GPU with RunPod](#how-to-install-the-container-on-a-cloud-gpu-with-runpod-process-for-other-cloud-services-should-be-similar)
-
-## Paperspace Installation
-
+## RunPod Cloud GPU Installation
+8. [Create a New Template](create-a-new-template)
+9. [Optional - Create a Network Volume](optional-create-a-network-volume)
+10. [Deploy the Pod](deploy-the-pod)
+    
+## Paperspace Cloud GPU Installation
+11. [Connect Paperspace to GitHubRegistry](connect-paperspace-to-githubregistry)
+12. [Deploy Container on GPU of Choice](deploy-container-on-gpu-of-choice)
+13. [Connect to Application Link](connect-to-application-lin)
 
 ## Using ArtOfficial Studio
-9. [Using the Home Page](#9-using-the-home-page)
-10. [Training Tools](#10-training-tools)
-11. [CivitAI Downloader](#11-civitai-downloader)
-12. [HuggingFace Downloader](#12-huggingface-downloader)
+14. [Using the Home Page](#app-links)
+15. [Model Downloader](#model-downloader-tab)
+16. [Training Tools](#training-tools-tab)
+17. [CivitAI Downloader](#civitai-downloader)
+18. [HuggingFace Downloader](#huggingface-downloader)
 
 ---
 
@@ -259,8 +264,9 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 ### Paperspace Installation
 
-## 1. **Connect to GitHubRegistry**
-
+## 1. **Connect Paperspace to GitHubRegistry**
+## 2. **Deploy Container on GPU of Choice**
+## 3. **Connect to Application Link**
 
 ---
 
