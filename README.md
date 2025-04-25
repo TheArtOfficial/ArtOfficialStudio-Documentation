@@ -264,7 +264,9 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 ### 9. Using ArtOfficial Studio
    **To launch ArtOfficial Studio:**
    Local: Navigate to `http://localhost:80/`
+   
    Runpod: Connect to port 80
+   
    Paperspace: just navigate to the url provided by the by Paperspace.
 
   **App Links:**  
