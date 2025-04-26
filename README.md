@@ -5,7 +5,7 @@
 Welcome to **ArtOfficial Studio** — a powerful Docker-based container application designed to make cutting-edge AI tools and model training accessible to everyone. The first-time set-up may seem complex, but once docker is installed, it is only one click to pull all of the latest models, workflows, and ComfyUI features. Whether you’re an artist, researcher, or enthusiast, this tool offers:
 
 * One-click access to the **latest AI models**  
-* SAGEATTENTION AND TORCH COMPILE just work\!
+* **SAGEATTENTION** and **TORCH COMPILE** just work\!
 * Simple interfaces for running various AI Tools (ComfyUI, Kohya_ss, diffusion-pipe, FluxGym)
 * Easy setup of **LoRA training tools**  
 * Persistent storage for your models while always using the **latest software updates**
