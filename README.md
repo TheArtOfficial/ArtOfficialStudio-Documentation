@@ -12,7 +12,8 @@ Welcome to **ArtOfficial Studio** — a powerful Docker-based container applicat
   - Kohya_ss
   - diffusion-pipe
   - FluxGym
-* Easy setup of **LoRA training tools**  
+* Easy setup of **LoRA training tools**
+* JupyterLab for full filesystem control!  
 * Persistent storage for your models while always using the **latest software updates**
 
 No technical background? No worries. This guide is written to walk you through each step from scratch. If you have any issues, chatGPT is your friend\! It is probably better at answering your questions than even I would be. I am also available on discord to help you get started, I have a dedicated channel to ArtOfficial Studio there\!
