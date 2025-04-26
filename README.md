@@ -111,7 +111,7 @@ Think of it like this:
 ### Windows (with WSL2 and NVIDIA GPU)
 [Video tutorial: Installing Nvidia-Docker On Windows 10/11](https://www.youtube.com/watch?v=FwOsSscx_98)
 
-1. Install WSL2
+1. To install WSL2, open command prompt or powershell and run:
 ```bash
 wsl --install
 ```
