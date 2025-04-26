@@ -6,7 +6,7 @@ Welcome to **ArtOfficial Studio** — a powerful Docker-based container applicat
 
 * One-click access to the **latest AI models**  
 * SAGEATTENTION AND TORCH COMPILE just work\!
-* Simple interfaces through port forwarding  
+* Simple interfaces for running various AI Tools
 * Easy setup of **LoRA training tools**  
 * Persistent storage for your models while always using the **latest software updates**
 
