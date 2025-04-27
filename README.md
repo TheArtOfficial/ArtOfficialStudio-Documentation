@@ -170,7 +170,7 @@ docker run \
   --gpus all \
   -it \
   -p 80:80 \
-  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume Docker volume is fixed to /workspace, do not change that.
+  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
@@ -182,7 +182,7 @@ docker run \
   --sm-size=32g \
   -it \
   -p 80:80 \
-  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume Docker volume is fixed to /workspace, do not change that.
+  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
