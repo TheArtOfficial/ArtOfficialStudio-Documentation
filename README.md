@@ -168,7 +168,19 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 ```bash
 docker run \
   --gpus all \
-  -it --rm \
+  -it \
+  -p 80:80 \
+  -v C:/PathOnYourPCToStoreFiles:/workspace \
+  ghcr.io/theartofficial/artofficialstudio:latest
+```
+
+If you plan on doing lora training, you'll need to increase the shm size that is passed to the container with this command instead
+
+```bash
+docker run \
+  --gpus all -- \
+  --sm-size=32g \
+  -it \
   -p 80:80 \
   -v C:/PathOnYourPCToStoreFiles:/workspace \
   ghcr.io/theartofficial/artofficialstudio:latest
