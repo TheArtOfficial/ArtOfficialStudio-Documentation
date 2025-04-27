@@ -352,6 +352,9 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 ## Training Tools Tab  
    This tab provides tools to train LoRAs. Select a tool and hit install. The installation logs will appear in the **Installation Log** box. If any errors occur, you can send the logs for troubleshooting.
+   - Diffusion Pipe is tested and working well
+   - FluxGym Installation is clean, need to test functionality
+   - Kohya Installation is clean, need to test functionality
 ![Screenshot from 2025-04-25 11-03-05](https://github.com/user-attachments/assets/df25ce90-4e43-48a7-b402-87fe279edd24)
 
 ## CivitAI Downloader Tab
