@@ -6,7 +6,7 @@ Welcome to **ArtOfficial Studio** — a powerful Docker-based container applicat
 
 * Works on Windows, Linux, or Cloud!
 * One-click access to the **latest AI models**  
-* **SAGEATTENTION** and **TORCH COMPILE** just work\!
+* **SAGEATTENTION**, **TORCH COMPILE**, and **Animated Previews** just work\!
 * Simple interfaces for running various AI Tools
   - ComfyUI
   - Kohya_ss
@@ -195,9 +195,29 @@ http://localhost:80
 
 ## Mounting a Volume Drive to Persist Data
 
+Docker is able to use your hard drive to store all of the contianer data. The way the container is set up, is all of the important ComfyUI, and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
+
+A windows example would be:
+
+```
+-v C:/user/artofficial/vol1:/workspace
+```
+
+A linux example would be:
+
+```
+-v /home/artofficial/vol1:/workspace
+```
+
 Use the same run command (above), but make sure your path is correct:
 ```bash
--v C:/PathOnYourPCToStoreFiles:/workspace
+docker run \
+  --gpus all -- \
+  --sm-size=32g \
+  -it \
+  -p 80:80 \
+  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+  ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
 This saves everything to your local drive.
