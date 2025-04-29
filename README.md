@@ -140,18 +140,17 @@ wsl -l -v
 
 8. Install NVIDIA Container Toolkit in WSL2
    
-   Type the following into the Ubuntu Shell:
-   
-```bash
-sudo apt-get update
-sudo apt-get install -y nvidia-container-toolkit
-sudo nvidia-ctk runtime configure --runtime=docker
-```
+   Type the following into the Ubuntu Shell: 
+  ```bash
+  sudo apt-get update
+  sudo apt-get install -y nvidia-container-toolkit
+  sudo nvidia-ctk runtime configure --runtime=docker
+  ```
 
 8. Verify GPU in Docker
-```bash
-docker run --gpus all nvidia/cuda:12.2.0-base-ubuntu20.04 nvidia-smi
-```
+  ```bash
+  docker run --gpus all nvidia/cuda:12.2.0-base-ubuntu20.04 nvidia-smi
+  ```
 If this does not throw an error, then you are all set to run ComfyUI with GPU enabled!
 
 9. You are ready to head to section 5, "How to Run the ArtOfficial Studio Docker Image"!
@@ -165,9 +164,9 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 ## 4. How to Log in to Docker with GitHub Token (One-time setup)
 
-```bash
-docker login ghcr.io -u YOUR_GITHUB_USERNAME -p YOUR_GITHUB_TOKEN
-```
+  ```bash
+  docker login ghcr.io -u YOUR_GITHUB_USERNAME -p YOUR_GITHUB_TOKEN
+  ```
 
 Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 
@@ -177,26 +176,26 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 
 ## 5. How to Run the ArtOfficial Studio Docker Image
 
-```bash
-docker run \
-  --gpus all \
-  -it \
-  -p 80:80 \
-  -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
-  ghcr.io/theartofficial/artofficialstudio:latest
-```
+  ```bash
+  docker run \
+    --gpus all \
+    -it \
+    -p 80:80 \
+    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    ghcr.io/theartofficial/artofficialstudio:latest
+  ```
 
 If you plan on doing lora training, you'll need to increase the shm size that is passed to the container with this command instead
 
-```bash
-docker run \
-  --gpus all -- \
-  --shm-size=32g \
-  -it \
-  -p 80:80 \
-  -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
-  ghcr.io/theartofficial/artofficialstudio:latest
-```
+  ```bash
+  docker run \
+    --gpus all -- \
+    --shm-size=32g \
+    -it \
+    -p 80:80 \
+    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    ghcr.io/theartofficial/artofficialstudio:latest
+  ```
 
 Replace the path with your actual folder location.
 
@@ -218,9 +217,9 @@ WindowsPath = WSL Path
 
 C:/Your/Path/Here = /mnt/c/your/path/here
 
-```
--v /mnt/c/your/path/here:/workspace
-```
+  ```
+  -v /mnt/c/your/path/here:/workspace
+  ```
 
 Example2:
 
@@ -228,26 +227,27 @@ Windows Path = WSL Path
 
 E:/This/Is/Path = /mnt/e/this/is/path
 
-```
--v /mnt/e/this/is/path:/workspace
-```
+  ```
+  -v /mnt/e/this/is/path:/workspace
+  ```
 
 A linux example would be:
 
-```
--v /home/artofficial/vol1:/workspace
-```
+  ```
+  -v /home/artofficial/vol1:/workspace
+  ```
 
 Use the same run command (above), but make sure your path is correct:
-```bash
-docker run \
-  --gpus all -- \
-  --shm-size=32g \
-  -it \
-  -p 80:80 \
-  -v /mnt/c/your/path/here:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
-  ghcr.io/theartofficial/artofficialstudio:latest
-```
+
+  ```bash
+  docker run \
+    --gpus all -- \
+    --shm-size=32g \
+    -it \
+    -p 80:80 \
+    -v /mnt/c/your/path/here:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    ghcr.io/theartofficial/artofficialstudio:latest
+  ```
 
 This saves everything to your local drive.
 
