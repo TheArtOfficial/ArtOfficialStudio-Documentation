@@ -139,6 +139,9 @@ wsl -l -v
    An Ubuntu shell should pop up. 
 
 8. Install NVIDIA Container Toolkit in WSL2
+   
+   Type the following into the Ubuntu Shell:
+   
 ```bash
 sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
