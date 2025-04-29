@@ -162,7 +162,7 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 ---
 
-## 4. How to Log in to Docker with GitHub Token (One-time setup)
+## How to Log in to Docker with GitHub Token (One-time setup)
 
   ```bash
   docker login ghcr.io -u YOUR_GITHUB_USERNAME -p YOUR_GITHUB_TOKEN
@@ -174,7 +174,7 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 
 ---
 
-## 5. How to Run the ArtOfficial Studio Docker Image
+## How to Run the ArtOfficial Studio Docker Image
 
   ```bash
   docker run \
