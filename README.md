@@ -206,7 +206,7 @@ http://localhost:80
 
 ## Mounting a Volume Drive to Persist Data
 
-Docker is able to use your hard drive to store all of the contianer data. The way the container is set up, is all of the important ComfyUI, and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
+Docker is able to use your hard drive to store all of the contianer data. The contianer is set up so all of the important ComfyUI and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
 
 A windows example would be:
 There is a conversion to go from a windows path to a WSL path:
