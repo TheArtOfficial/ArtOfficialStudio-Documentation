@@ -128,21 +128,30 @@ wsl -l -v
    Choose **WSL2** backend during installation.
 
 4. After install, open Docker Desktop → **Settings** → **Resources** → **WSL Integration**, and enable your Ubuntu distro.
+   ![image](https://github.com/user-attachments/assets/7ce7ecd0-d591-4ecd-a7ad-9c526bb8523d)
 
-5. Install NVIDIA Container Toolkit in WSL2
+6. Pop an Ubuntu Shell
+   After you've completed these steps, go to powershell and type this command:
+
+   ```bash
+   wsl -d Ubuntu
+   ```
+   An Ubuntu shell should pop up. 
+
+8. Install NVIDIA Container Toolkit in WSL2
 ```bash
 sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
-sudo systemctl restart docker || echo "If this fails, restart Docker Desktop manually."
-wsl --shutdown
 ```
 
-6. Verify GPU in Docker
+8. Verify GPU in Docker
 ```bash
 docker run --gpus all nvidia/cuda:12.2.0-base-ubuntu20.04 nvidia-smi
 ```
+If this does not throw an error, then you are all set to run ComfyUI with GPU enabled!
 
+9. You are ready to head to section 5, "How to Run the ArtOfficial Studio Docker Image"!
 ---
 
 ### Linux  
@@ -170,7 +179,7 @@ docker run \
   --gpus all \
   -it \
   -p 80:80 \
-  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+  -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
@@ -182,7 +191,7 @@ docker run \
   --shm-size=32g \
   -it \
   -p 80:80 \
-  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+  -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
@@ -198,9 +207,26 @@ http://localhost:80
 Docker is able to use your hard drive to store all of the contianer data. The way the container is set up, is all of the important ComfyUI, and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
 
 A windows example would be:
+There is a conversion to go from a windows path to a WSL path:
+
+Example1:
+
+WindowsPath = WSL Path
+
+C:/Your/Path/Here = /mnt/c/your/path/here
 
 ```
--v C:/user/artofficial/vol1:/workspace
+-v /mnt/c/your/path/here:/workspace
+```
+
+Example2:
+
+Windows Path = WSL Path
+
+E:/This/Is/Path = /mnt/e/this/is/path
+
+```
+-v /mnt/e/this/is/path:/workspace
 ```
 
 A linux example would be:
@@ -216,7 +242,7 @@ docker run \
   --shm-size=32g \
   -it \
   -p 80:80 \
-  -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+  -v /mnt/c/your/path/here:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
