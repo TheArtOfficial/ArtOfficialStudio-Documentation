@@ -110,7 +110,7 @@ Think of it like this:
 ## How to Install Docker with GPU Support (One-time setup)
 
 ### Windows (with WSL2 and NVIDIA GPU)
-[Video tutorial: Installing Nvidia-Docker On Windows 10/11](https://www.youtube.com/watch?v=FwOsSscx_98)
+[Video tutorial: Installing Nvidia-Docker On Windows 10/11]([https://www.youtube.com/watch?v=FwOsSscx_98](https://youtu.be/PB7zM3JrgkI?si=T3LOD8y7yim51opS))
 
 1. To install WSL2, open command prompt or powershell and run:
 ```bash
