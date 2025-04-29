@@ -213,7 +213,7 @@ Use the same run command (above), but make sure your path is correct:
 ```bash
 docker run \
   --gpus all -- \
-  --sm-size=32g \
+  --shm-size=32g \
   -it \
   -p 80:80 \
   -v C:/PathOnYourPCToStoreFiles:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
