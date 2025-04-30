@@ -266,7 +266,7 @@ You're all set! Dive into ArtOfficial Studio and explore the frontier of AI crea
 
 ---
 
-### Runpod Installation
+# Runpod Installation
 
 If your pod's driver does not support cu128, there is a cu126 version available. Simply swap 
 
