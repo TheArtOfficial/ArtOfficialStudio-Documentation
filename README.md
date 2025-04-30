@@ -290,6 +290,7 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 
 ### 2. Create a New Template:
    - Navigate to **My Templates** and click **+ New Template**.
+     
 ![Screenshot from 2025-04-23 18-04-15](https://github.com/user-attachments/assets/684e9fee-0852-4072-a37a-5a5783ab6467)
 
 ### 3. Create the Template:
@@ -300,6 +301,7 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
    - **Registry Credentials:** Ensure you enter your GitHub username and token to authenticate the container.
    - Select your credentials from the dropdown list after creating them.
    - Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
+     
 ![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
 
 ### 4. Save the Template:
@@ -309,16 +311,19 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
    - This step is not necessary but is highly recommended to avoid redownloading files every time.
    - Navigate to **Storage** in the left menu.
    - Choose the options that best suit you. The **Europe datacenter** tends to have the best performance, but select what works best for you.
+     
 ![Screenshot from 2025-04-24 07-01-50](https://github.com/user-attachments/assets/41e459fb-486a-4b66-89f0-177a0d2e0b2f)
 
 ### 6. Deploy the Pod:
    - Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
    - Ensure you have the correct filter settings for the pod:
+     
 ![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
 
    - Select the GPU (For this example, we use a 5090).
      - For most workflows, **16GB of VRAM** is sufficient. Some might require **24GB**, especially for 720p video generation.
    - Choose **Change Template** and select the template created earlier.
+     
 ![Screenshot from 2025-04-24 07-09-20](https://github.com/user-attachments/assets/823c81fe-6596-44fa-8525-33b372bd7f44)
 
 ### 7. Deploy On-Demand:
@@ -328,10 +333,12 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
 ### 8. Verify Logs:
    - Once successful, your system logs should indicate that everything is running, and you'll see messages like “downloading ------>” if it’s your first time using the template.
    - If you see an "unauthorized" error, this means the credentials are incorrect or access hasn't been granted yet.
+     
 ![Screenshot from 2025-04-24 07-14-34](https://github.com/user-attachments/assets/e87e1d8f-ba3c-4508-871b-576617aa2d32)
 
 ### 9. Connect:
   - Once everything is working, the **Connect** button will become active. Click it to access your container.
+    
 ![Screenshot from 2025-04-24 07-18-33](https://github.com/user-attachments/assets/06c41b13-38c5-4fc3-8ecb-106f740bd15a)
 
 ### 10. Connect to port 80:
@@ -345,12 +352,15 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 ### 1. **Connect Paperspace to GitHubRegistry**
 - Click on your profile in the top right and select "Team Settings"
+  
  ![image](https://github.com/user-attachments/assets/136ba2af-8df7-434a-bb9a-5976d89319ae)
 
 - Go to the "Containers" Tab, select the "GitHub Container Registry" from the dropdown, and hit "NEXT"
+  
 ![image](https://github.com/user-attachments/assets/61b6359e-2ff7-4112-892b-e29c96491c45)
 
 - Fill out the info as shown below. Hit "Test Connection" to make sure your access to the github repo is available
+  
 ![Screenshot from 2025-04-25 13-03-58](https://github.com/user-attachments/assets/23b25418-0e63-4374-9c76-55275b24bc6c)
 
 ### 2. **Deploy Container on GPU of Choice**
@@ -362,16 +372,21 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 `ghcr.io/theartofficial/artofficialstudio:latest`  
 `ghcr.io/theartofficial/artofficialstudio:cu126latest`
 `ghcr.io/theartofficial/artofficialstudio:cu125latest`
+
 ![image](https://github.com/user-attachments/assets/56f2c98a-b8b0-4b2f-93df-66400fb1a519)
 
 - Make sure port 80 is exposed, then click "DEPLOY"
+  
 ![image](https://github.com/user-attachments/assets/74ea9b96-a6d5-4b0b-a2da-703a30a342b4)
 
 
 ### 3. **Connect to Application Link**
 - Once you see tensorboard messages at the end of the log, your instance is ready to go!
+  
 ![Screenshot from 2025-04-25 13-19-28](https://github.com/user-attachments/assets/98f47462-a36a-4886-a7f7-3e969eb199eb)
+
 - From the console dashboard, click the "Endpoint" Link, and you will be connected to the App Links page of the application!
+  
 ![image](https://github.com/user-attachments/assets/68e28f57-103c-48d9-982f-f0df5509c25a)
 
 
@@ -388,10 +403,12 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 ## App Links  
    App links provides all of the connections to other services maintained by the app
+   
 ![image](https://github.com/user-attachments/assets/b4ba566a-99e2-4496-8dea-0f30cbff842b)
 
 ## Model Downloader Tab
    The **Model Downloader** tab allows you to select and download models straight into the correct folder for **ComfyUI**. Once downloaded, Head to the "App Links" tab to access **ComfyUI**. Models should be automatically placed in the   correct directories.
+   
 ![Screenshot from 2025-04-25 11-02-51](https://github.com/user-attachments/assets/1f25722f-6ca8-4e84-a691-c11b5034574a)
 
 ## Training Tools Tab  
@@ -399,13 +416,16 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
    - Diffusion Pipe is tested and working well
    - FluxGym Installation is clean, need to test functionality
    - Kohya Installation is clean, need to test functionality
+     
 ![Screenshot from 2025-04-25 11-03-05](https://github.com/user-attachments/assets/df25ce90-4e43-48a7-b402-87fe279edd24)
 
 ## CivitAI Downloader Tab
    This feature allows you to download files from CivitAI. Simply provide the URL, model type, desired filename, and your CivitAI token, and it will automatically place the file in the right ComfyUI folder.
+   
 ![Screenshot from 2025-04-25 11-03-23](https://github.com/user-attachments/assets/80851482-7170-4b8b-9ac5-e949acd15730)
 
 ## HuggingFace Downloader Tab:  
+
    Similar to the CivitAI downloader, this tool allows you to download models from HuggingFace by providing the URL, download path, and optionally a HuggingFace token.
 ![Screenshot from 2025-04-25 11-03-36](https://github.com/user-attachments/assets/530dd127-e771-4840-99d4-ce9285999249)
 
