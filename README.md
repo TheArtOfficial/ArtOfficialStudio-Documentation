@@ -346,8 +346,10 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 ### 1. **Connect Paperspace to GitHubRegistry**
 - Click on your profile in the top right and select "Team Settings"
  ![image](https://github.com/user-attachments/assets/136ba2af-8df7-434a-bb9a-5976d89319ae)
+
 - Go to the "Containers" Tab, select the "GitHub Container Registry" from the dropdown, and hit "NEXT"
 ![image](https://github.com/user-attachments/assets/61b6359e-2ff7-4112-892b-e29c96491c45)
+
 - Fill out the info as shown below. Hit "Test Connection" to make sure your access to the github repo is available
 ![Screenshot from 2025-04-25 13-03-58](https://github.com/user-attachments/assets/23b25418-0e63-4374-9c76-55275b24bc6c)
 
