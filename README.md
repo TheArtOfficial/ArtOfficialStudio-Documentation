@@ -280,21 +280,19 @@ for one of the following:
 
 For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are mostly backward compatible for modern hardware, it's generally a good idea to update to the latest version that supports the newest CUDA version.
 
----
-
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
 A note before we get started: **4090 GPUs on RunPod** have been unreliable recently, with some lacking Nvidia drivers or having connection issues when pulling Docker images. I recommend avoiding these for now until issues are resolved. On the other hand, **5090 GPUs** have worked flawlessly with this setup!
 
 
-## 1. Go to RunPod:
+### 1. Go to RunPod:
    - Sign in to your account at [RunPod.io](https://runpod.io).
 
-## 2. Create a New Template:
+### 2. Create a New Template:
    - Navigate to **My Templates** and click **+ New Template**.
 ![Screenshot from 2025-04-23 18-04-15](https://github.com/user-attachments/assets/684e9fee-0852-4072-a37a-5a5783ab6467)
 
-## 3. Create the Template:
+### 3. Create the Template:
    - In the template settings, select **"Docker Image"** and paste the following image URL (replace with cu126 version if necessary):
      ```bash
      ghcr.io/theartofficial/artofficialstudio:latest
@@ -304,17 +302,16 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
    - Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
 ![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
 
-
-## 5. Save the Template:
+### 4. Save the Template:
    - Click **Save Template** once everything is correct.
 
-## 6. Optional - Create a Network Volume:
+### 5. Optional - Create a Network Volume:
    - This step is not necessary but is highly recommended to avoid redownloading files every time.
    - Navigate to **Storage** in the left menu.
    - Choose the options that best suit you. The **Europe datacenter** tends to have the best performance, but select what works best for you.
 ![Screenshot from 2025-04-24 07-01-50](https://github.com/user-attachments/assets/41e459fb-486a-4b66-89f0-177a0d2e0b2f)
 
-## 7. Deploy the Pod:
+### 6. Deploy the Pod:
    - Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
    - Ensure you have the correct filter settings for the pod:
 ![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
@@ -324,30 +321,29 @@ A note before we get started: **4090 GPUs on RunPod** have been unreliable recen
    - Choose **Change Template** and select the template created earlier.
 ![Screenshot from 2025-04-24 07-09-20](https://github.com/user-attachments/assets/823c81fe-6596-44fa-8525-33b372bd7f44)
 
-
-## 8. Deploy On-Demand:
+### 7. Deploy On-Demand:
    - Click **Deploy On-Demand**. You should see the logs start to run.
    - If you encounter an error such as "No container found," this may indicate a network or setup issue with the pod.
 
-## 9. Verify Logs:
-   - Once successful, your system logs should indicate that everything is running, and you'll see messages like “downloading ------” if it’s your first time using the template.
+### 8. Verify Logs:
+   - Once successful, your system logs should indicate that everything is running, and you'll see messages like “downloading ------>” if it’s your first time using the template.
    - If you see an "unauthorized" error, this means the credentials are incorrect or access hasn't been granted yet.
 ![Screenshot from 2025-04-24 07-14-34](https://github.com/user-attachments/assets/e87e1d8f-ba3c-4508-871b-576617aa2d32)
 
-## 10. Connect:
-    - Once everything is working, the **Connect** button will become active. Click it to access your container.
+### 9. Connect:
+  - Once everything is working, the **Connect** button will become active. Click it to access your container.
 ![Screenshot from 2025-04-24 07-18-33](https://github.com/user-attachments/assets/06c41b13-38c5-4fc3-8ecb-106f740bd15a)
 
-## 11. Connect to port 80:
-    - The app runs on port 80, so click that and the front-end UI will open.
+### 10. Connect to port 80:
+  - The app runs on port 80, so click that and the front-end UI will open.
 
 By following these steps, you’ll have a fully working setup with the ArtOfficial Studio container running on your RunPod cloud GPU!
 
 ---
 
-### Paperspace Installation
+# Paperspace Installation
 
-## 1. **Connect Paperspace to GitHubRegistry**
+### 1. **Connect Paperspace to GitHubRegistry**
 - Click on your profile in the top right and select "Team Settings"
  ![image](https://github.com/user-attachments/assets/136ba2af-8df7-434a-bb9a-5976d89319ae)
 - Go to the "Containers" Tab, select the "GitHub Container Registry" from the dropdown, and hit "NEXT"
@@ -355,10 +351,7 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 - Fill out the info as shown below. Hit "Test Connection" to make sure your access to the github repo is available
 ![Screenshot from 2025-04-25 13-03-58](https://github.com/user-attachments/assets/23b25418-0e63-4374-9c76-55275b24bc6c)
 
-
-
-
-## 2. **Deploy Container on GPU of Choice**
+### 2. **Deploy Container on GPU of Choice**
 - Select which GPU to deploy in the dropdown.
 - Give the container a nickname
 - Select "Private container registry"
@@ -373,7 +366,7 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 ![image](https://github.com/user-attachments/assets/74ea9b96-a6d5-4b0b-a2da-703a30a342b4)
 
 
-## 3. **Connect to Application Link**
+### 3. **Connect to Application Link**
 - Once you see tensorboard messages at the end of the log, your instance is ready to go!
 ![Screenshot from 2025-04-25 13-19-28](https://github.com/user-attachments/assets/98f47462-a36a-4886-a7f7-3e969eb199eb)
 - From the console dashboard, click the "Endpoint" Link, and you will be connected to the App Links page of the application!
@@ -382,7 +375,7 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 
 ---
 
-### Using ArtOfficial Studio
+# Using ArtOfficial Studio
 ## To launch ArtOfficial Studio:
    
    Local: Navigate to `http://localhost:80/`
