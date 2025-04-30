@@ -208,7 +208,8 @@ http://localhost:80
 
 Docker is able to use your hard drive to store all of the contianer data. The contianer is set up so all of the important ComfyUI and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
 
-A windows example would be:
+# Windows:
+
 There is a conversion to go from a windows path to a WSL path:
 
 Example1:
@@ -231,7 +232,7 @@ E:/This/Is/Path = /mnt/e/this/is/path
   -v /mnt/e/this/is/path:/workspace
   ```
 
-A linux example would be:
+# Linux:
 
   ```
   -v /home/artofficial/vol1:/workspace
