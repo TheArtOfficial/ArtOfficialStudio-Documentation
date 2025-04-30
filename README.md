@@ -173,37 +173,6 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 ## First Time Setup Ends Here
 
 ---
-
-## How to Run the ArtOfficial Studio Docker Image
-
-  ```bash
-  docker run \
-    --gpus all \
-    -it \
-    -p 80:80 \
-    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
-    ghcr.io/theartofficial/artofficialstudio:latest
-  ```
-
-If you plan on doing lora training, you'll need to increase the shm size that is passed to the container with this command instead
-
-  ```bash
-  docker run \
-    --gpus all -- \
-    --shm-size=32g \
-    -it \
-    -p 80:80 \
-    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
-    ghcr.io/theartofficial/artofficialstudio:latest
-  ```
-
-Replace the path with your actual folder location.
-
-Access via browser:  
-http://localhost:80
-
----
-
 ## Mounting a Volume Drive to Persist Data
 
 Docker is able to use your hard drive to store all of the contianer data. The contianer is set up so all of the important ComfyUI and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
@@ -251,6 +220,36 @@ Use the same run command (above), but make sure your path is correct:
   ```
 
 This saves everything to your local drive.
+
+---
+
+## How to Run the ArtOfficial Studio Docker Image
+
+  ```bash
+  docker run \
+    --gpus all \
+    -it \
+    -p 80:80 \
+    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    ghcr.io/theartofficial/artofficialstudio:latest
+  ```
+
+If you plan on doing lora training, you'll need to increase the shm size that is passed to the container with this command instead
+
+  ```bash
+  docker run \
+    --gpus all -- \
+    --shm-size=32g \
+    -it \
+    -p 80:80 \
+    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    ghcr.io/theartofficial/artofficialstudio:latest
+  ```
+
+Replace the path with your actual folder location.
+
+Access via browser:  
+http://localhost:80
 
 ---
 
