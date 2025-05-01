@@ -217,17 +217,7 @@ E:/This/Is/Path = /mnt/e/this/is/path
   -v /home/artofficial/vol1:/workspace
   ```
 
-Use the same run command as in the section below, but make sure your path is correct:
-
-  ```bash
-  docker run \
-    --gpus all -- \
-    --shm-size=32g \
-    -it \
-    -p 80:80 \
-    -v /mnt/c/your/path/here:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
-    ghcr.io/theartofficial/artofficialstudio:latest
-  ```
+Use the same run command as in the section below, and make sure you use the correct path.
 
 This saves everything to your local drive.
 
@@ -273,6 +263,16 @@ docker rm -f $(docker ps -aq)
 Then rerun the same Docker command as before.
 
 You're all set! Dive into ArtOfficial Studio and explore the frontier of AI creation.
+
+## How to update your Docker Image to the latest
+
+Just run the pull command again
+
+```
+docker pull ghcr.io/theartofficial/artofficialstudio:latest
+```
+
+Running the container without pulling it will still update ComfyUI and all custom nodes, but you won't have any of the new ArtOfficial Studio features released, so if you want to try out a new model or new training too that's been released, make sure to pull the image again.
 
 ---
 
