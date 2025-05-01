@@ -173,6 +173,16 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 ## First Time Setup Ends Here
 
 ---
+
+## Download the Docker Image
+
+To deploy the container faster locally, it is best practice to download the container first and then run it locally. do so with this command:
+
+```
+docker pull ghcr.io/theartofficial/artofficialstudio:latest
+```
+
+
 ## Mounting a Volume Drive to Persist Data
 
 Docker is able to use your hard drive to store all of the contianer data. The contianer is set up so all of the important ComfyUI and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
@@ -207,7 +217,7 @@ E:/This/Is/Path = /mnt/e/this/is/path
   -v /home/artofficial/vol1:/workspace
   ```
 
-Use the same run command (above), but make sure your path is correct:
+Use the same run command as in the section below, but make sure your path is correct:
 
   ```bash
   docker run \
