@@ -296,9 +296,6 @@ The 4090s on runpod for example, only support cu12.4 at the time of writing this
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
-A note before we get started: **4090 GPUs on RunPod** have been unreliable recently, with some lacking Nvidia drivers or having connection issues when pulling Docker images. I recommend avoiding these for now until issues are resolved. On the other hand, **5090 GPUs** have worked flawlessly with this setup!
-
-
 ### 1. Go to RunPod:
    - Sign in to your account at [RunPod.io](https://runpod.io).
 
