@@ -304,7 +304,7 @@ To filter by cuda version, use this dropdown:
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
-**A warning before we begin, this does take longer to start than most Comfy Templates on RunPod, but that is because it gives you EVERYTHING you need. From training tools, to Sageattention, to Controlnets, you won't have to search around the internet to find nodes or models, so although the startup time is high, it will save you time overall.**
+**A warning before we begin, this does take longer to start than most Comfy Templates on RunPod, but that is because it gives you EVERYTHING you need. From Lora training tools, to Sageattention, to Controlnets, you won't have to search around the internet to find projects, nodes or models, so although the startup time is high, it will save you time overall.**
 
 ### 1. Go to RunPod:
    - Sign in to your account at [RunPod.io](https://runpod.io).
