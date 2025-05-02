@@ -87,10 +87,11 @@ To access my private container image hosted on GitHub Container Registry (GHCR),
 
 ## First Time Setup starts here
 
-If your Nvidia Driver does not support cu128, there is a cu126 and cuda125 version as well, if you need a different cuda version, please let me know! Not too difficult to create a new image.
+If your Nvidia Driver does not support cu128, there are other cuda versions available as well, if you need a different cuda version, please let me know! Not too difficult to create a new image.
 `ghcr.io/theartofficial/artofficialstudio:latest`  
 `ghcr.io/theartofficial/artofficialstudio:cu126latest`
 `ghcr.io/theartofficial/artofficialstudio:cu125latest`
+`ghcr.io/theartofficial/artofficialstudio:cu124latest`
 
 Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 or cu125 version should work the same.
 
@@ -278,7 +279,7 @@ Running the container without pulling it will still update ComfyUI and all custo
 
 # Runpod Installation
 
-If your pod's driver does not support cu128, there is are other versions available. Simply swap 
+If your pod's driver does not support cu128, there are other versions available. Simply swap 
 
 `ghcr.io/theartofficial/artofficialstudio:latest` 
 
@@ -290,13 +291,12 @@ for one of the following:
 
 `ghcr.io/theartofficial/artofficialstudio:cu124latest` 
 
-For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are mostly backward compatible for modern hardware, it's generally a good idea to update to the latest version that supports the newest CUDA version.
+For 50xx series, cu128 is required.
 
 The 4090s on runpod for example, only support cu12.4 at the time of writing this.
 
 To filter by cuda version, use this dropdown:
 ![image](https://github.com/user-attachments/assets/03a879c6-140a-44f3-a678-e5287892acaa)
-
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
