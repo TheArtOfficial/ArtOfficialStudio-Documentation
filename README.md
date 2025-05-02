@@ -88,9 +88,13 @@ To access my private container image hosted on GitHub Container Registry (GHCR),
 ## First Time Setup starts here
 
 If your Nvidia Driver does not support cu128, there are other cuda versions available as well, if you need a different cuda version, please let me know! Not too difficult to create a new image.
+
 `ghcr.io/theartofficial/artofficialstudio:latest`  
+
 `ghcr.io/theartofficial/artofficialstudio:cu126latest`
+
 `ghcr.io/theartofficial/artofficialstudio:cu125latest`
+
 `ghcr.io/theartofficial/artofficialstudio:cu124latest`
 
 Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 or cu125 version should work the same.
@@ -299,6 +303,8 @@ To filter by cuda version, use this dropdown:
 ![image](https://github.com/user-attachments/assets/03a879c6-140a-44f3-a678-e5287892acaa)
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
+
+**A warning before we begin, this does take longer than most Comfy Templates on RunPod, but that is because it gives you EVERYTHING you need. From training tools, to sageattention, to controlnets, you won't have to search around the internet to find nodes or models, so although the startup time is high, it will save you time overall.**
 
 ### 1. Go to RunPod:
    - Sign in to your account at [RunPod.io](https://runpod.io).
