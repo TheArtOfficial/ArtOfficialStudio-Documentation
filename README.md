@@ -235,7 +235,7 @@ This saves everything to your local drive.
     --gpus all \
     -it \
     -p 80:80 \
-    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    -v mnt/c/yourpcpath:/workspace \ 
     ghcr.io/theartofficial/artofficialstudio:latest
   ```
 
@@ -247,7 +247,7 @@ If you plan on doing lora training, you'll need to increase the shm size that is
     --shm-size=32g \
     -it \
     -p 80:80 \
-    -v mnt/c/yourpcpath:/workspace \ #Format is PathToYourVolume:PathToDockerVolume PathToDockerVolume is fixed to /workspace, do not change that.
+    -v mnt/c/yourpcpath:/workspace \
     ghcr.io/theartofficial/artofficialstudio:latest
   ```
 
