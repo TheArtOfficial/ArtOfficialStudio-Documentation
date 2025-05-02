@@ -382,6 +382,7 @@ By following these steps, you’ll have a fully working setup with the ArtOffici
 `ghcr.io/theartofficial/artofficialstudio:latest`  
 `ghcr.io/theartofficial/artofficialstudio:cu126latest`
 `ghcr.io/theartofficial/artofficialstudio:cu125latest`
+`ghcr.io/theartofficial/artofficialstudio:cu124latest`
 
 ![image](https://github.com/user-attachments/assets/56f2c98a-b8b0-4b2f-93df-66400fb1a519)
 
