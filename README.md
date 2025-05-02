@@ -294,6 +294,10 @@ For Nvidia 50xx series, cu128 is required, which is why this is the official rel
 
 The 4090s on runpod for example, only support cu12.4 at the time of writing this.
 
+To filter by cuda version, use this dropdown:
+![image](https://github.com/user-attachments/assets/03a879c6-140a-44f3-a678-e5287892acaa)
+
+
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
 ### 1. Go to RunPod:
