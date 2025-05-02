@@ -278,7 +278,7 @@ Running the container without pulling it will still update ComfyUI and all custo
 
 # Runpod Installation
 
-If your pod's driver does not support cu128, there is a cu126 version available. Simply swap 
+If your pod's driver does not support cu128, there is are other versions available. Simply swap 
 
 `ghcr.io/theartofficial/artofficialstudio:latest` 
 
@@ -288,7 +288,11 @@ for one of the following:
 
 `ghcr.io/theartofficial/artofficialstudio:cu125latest` 
 
+`ghcr.io/theartofficial/artofficialstudio:cu124latest` 
+
 For Nvidia 50xx series, cu128 is required, which is why this is the official release. Since drivers are mostly backward compatible for modern hardware, it's generally a good idea to update to the latest version that supports the newest CUDA version.
+
+The 4090s on runpod for example, only support cu12.4 at the time of writing this.
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
 
