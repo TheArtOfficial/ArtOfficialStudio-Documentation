@@ -243,7 +243,7 @@ If you plan on doing lora training, you'll need to increase the shm size that is
 
   ```bash
   docker run \
-    --gpus all -- \
+    --gpus all \
     --shm-size=32g \
     -it \
     -p 80:80 \
