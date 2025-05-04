@@ -158,7 +158,7 @@ wsl -l -v
   ```
 If this does not throw an error, then you are all set to run ComfyUI with GPU enabled!
 
-9. You are ready to head to section 5, "How to Run the ArtOfficial Studio Docker Image"!
+9. You are ready to head to, "How to Log in to Docker with GitHub Token"!
 ---
 
 ### Linux  
