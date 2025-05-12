@@ -322,8 +322,11 @@ To filter by cuda version, use this dropdown:
    - **Registry Credentials:** Ensure you enter your GitHub username and token to authenticate the container.
    - Select your credentials from the dropdown list after creating them.
    - Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
+   - Create an Environment Variable called "RUNPOD" with the value 1. This will let the system know that you're using runpod, so that gradio will work correctly.
      
 ![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
+![image](https://github.com/user-attachments/assets/f8232297-d4bd-42c6-9e78-02539263ca2c)
+
 
 ### 4. Save the Template:
    - Click **Save Template** once everything is correct.
