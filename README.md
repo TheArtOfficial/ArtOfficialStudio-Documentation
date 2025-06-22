@@ -156,7 +156,12 @@ Windows Subsystem for Linux (WSL) allows you to run a Linux environment directly
     ```powershell
     wsl --update
     ```
-4.  **Verify WSL Installation:**
+4. **If Ubuntu does not automatically install:**
+    Install it with:
+    ```powershell
+    wsl --install -d Ubuntu
+    ```
+6.  **Verify WSL Installation:**
     Open PowerShell or Command Prompt and run:
     ```bash
     wsl -l -v
