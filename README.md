@@ -277,41 +277,13 @@ docker pull ghcr.io/theartofficial/artofficialstudio:latest
 
 Docker is able to use your hard drive to store all of the contianer data. The contianer is set up so all of the important ComfyUI and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
 
-### Windows:
+If you are running on linux, make sure to use a path from inside the WSL distro. If you mount to a windows volume path, you will experience performance issues and slow loading times. These issues are completely eliminated by using a path inside WSL
 
-There is a conversion to go from a windows path to a WSL path:
+When you first start WSL, it will be completely empty, as shown by the first "ls" command. "ls" just lists the files that are in the file system.
+create a folder inside WSL with the "mkdir" command. In this case, I used "mkdir comfyvol"
+Now when we run "ls" we can see the comfyvol folder. This will be the folder we mount our docker image too so that we can persist the data.
+![image](https://github.com/user-attachments/assets/4ef75baa-585e-43ed-80a6-0a34755bebbe)
 
-Example1:
-
-WindowsPath = WSL Path
-
-C:/Your/Path/Here = /mnt/c/your/path/here
-
-```
--v /mnt/c/your/path/here:/workspace
-```
-
-Example2:
-
-Windows Path = WSL Path
-
-E:/This/Is/Path = /mnt/e/this/is/path
-
-```
--v /mnt/e/this/is/path:/workspace
-```
-
-### Linux:
-
-```
--v /home/artofficial/vol1:/workspace
-```
-
-Use the same run command as in the section below, and make sure you use the correct path.
-
-This saves everything to your local drive.
-
----
 
 ## How to Run the ArtOfficial Studio Docker Image
 
@@ -320,7 +292,7 @@ docker run \
   --gpus all \
   -it \
   -p 80:80 \
-  -v /mnt/c/yourpcpath:/workspace \
+  -v comfyvol:/workspace \
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
@@ -332,7 +304,7 @@ docker run \
   --shm-size=32g \
   -it \
   -p 80:80 \
-  -v /mnt/c/yourpcpath:/workspace \
+  -v comfyvol:/workspace \
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
