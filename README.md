@@ -240,6 +240,26 @@ This step confirms Docker can use your GPU via WSL 2.
 
 The original ArtOfficial Studio guide mentioned installing `nvidia-container-toolkit` and running `sudo nvidia-ctk runtime configure --runtime=docker` inside the WSL2 Ubuntu shell. For **Docker Desktop on Windows with WSL 2, these commands are generally NOT needed and NOT recommended** to be run inside your user WSL distribution (e.g., Ubuntu). Docker Desktop manages the NVIDIA container runtime integration itself. Running these commands manually can be redundant or potentially cause conflicts. The `docker run --rm --gpus all ... nvidia-smi` test is the correct way to verify Docker Desktop's GPU integration.
 
+**Step 7: Troubleshooting Speed & Performance Issues in Windows**
+
+Only use this step if you are having performance issues. For some reason docker-desktop typically only wants to use half of available resources. In this case, we need to create a .wslconfig file.
+1. Create a .wslconfig file in your C:/Users/<Username>/ folder
+   ![image](https://github.com/user-attachments/assets/494df023-47b5-4330-8de2-bfe3c7d70d9e)
+2. Check your Task Manager > Performance Tab for the Max RAM and Processors that you have available (in this case I have 32 processors and 93.6GB RAM)
+   ![image](https://github.com/user-attachments/assets/d2e36245-7206-46aa-a0ad-f72c690cb63d)
+3. Write the following in your .wslconfig file:
+   ```bash
+    [wsl2]
+    memory=<YourMaxRAM-10>GB
+    processors=<YourMaxProcessors>
+    ```
+4. For example, for my stats, my .wslconfig file looks like:
+   ```bash
+    [wsl2]
+    memory=80GB
+    processors=32
+    ```
+   
 **You are now ready to proceed with logging into Docker with your GitHub Token and running the ArtOfficial Studio image!**
 
 ---
