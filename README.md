@@ -243,7 +243,7 @@ The original ArtOfficial Studio guide mentioned installing `nvidia-container-too
 **Step 7: Troubleshooting Speed & Performance Issues in Windows**
 
 Only use this step if you are having performance issues. For some reason docker-desktop typically only wants to use half of available resources. In this case, we need to create a .wslconfig file.
-1. Create a .wslconfig file in your C:/Users/\<Username\>/ folder
+1. Create a .wslconfig file in your C:/Users/\<Username\> folder
    ![image](https://github.com/user-attachments/assets/494df023-47b5-4330-8de2-bfe3c7d70d9e)
 2. Check your Task Manager > Performance Tab for the Max RAM and Processors that you have available (in this case I have 32 processors and 93.6GB RAM)
    ![image](https://github.com/user-attachments/assets/d2e36245-7206-46aa-a0ad-f72c690cb63d)
