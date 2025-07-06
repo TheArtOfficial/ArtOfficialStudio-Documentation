@@ -261,7 +261,7 @@ Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
 
 ## Download the Docker Image
 
-**If you want to just run an automated script, just download the .bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/trainer to your path**
+**If you want to just run an automated script, just download the start_aos.bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/trainer to your path**
 
 
 To deploy the container faster locally, it is best practice to download the container first and then run it locally. do so with this command:
