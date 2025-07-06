@@ -174,39 +174,13 @@ While Docker containers bring their own CUDA libraries, installing the CUDA Tool
 
 1.  **Open your WSL Linux Terminal:**
     Type `wsl` or the name of your distribution (e.g., `ubuntu`) in PowerShell or Command Prompt.
-2.  **Inside the WSL (Ubuntu) terminal, run the following commands:**
-    Refer to the official NVIDIA CUDA Toolkit download page for WSL-Ubuntu to get the latest commands: [https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu)
-    _As of this writing, the typical commands are (replace `cuda-toolkit-12-x` with the specific version recommended on the NVIDIA page if different, e.g., `cuda-toolkit-12-5` or `cuda-toolkit-12-9`):_
 
-    ```bash
-    # Update package lists
-    sudo apt-get update
-
-    # Download and install the NVIDIA CUDA keyring
-    wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.1-1_all.deb
-    sudo dpkg -i cuda-keyring_1.1-1_all.deb
-    sudo apt-get update
-
-    # Install the CUDA Toolkit for WSL
-    # Check the NVIDIA website for the latest recommended version for WSL.
-    # For example, if CUDA 12.5 is the latest WSL toolkit:
-    sudo apt-get -y install cuda-toolkit-12-5
-
-    # Clean up the downloaded .deb file
-    rm cuda-keyring_1.1-1_all.deb
-    ```
-
-3.  **Verify `nvidia-smi` in WSL:**
-    NVIDIA drivers for WSL place `nvidia-smi` in a specific location. Run:
+2.  **Verify `nvidia-smi` in WSL:**
+    Run:
     ```bash
     /usr/lib/wsl/lib/nvidia-smi
     ```
     You should see details about your NVIDIA GPU. If it works, you can optionally add `/usr/lib/wsl/lib` to your `PATH` in your `~/.bashrc` (or `~/.zshrc`) for convenience:
-    ```bash
-    echo 'export PATH=/usr/lib/wsl/lib:$PATH' >> ~/.bashrc
-    source ~/.bashrc
-    ```
-    Now, just typing `nvidia-smi` should work.
 
 **Step 4: Install Docker Desktop for Windows**
 
