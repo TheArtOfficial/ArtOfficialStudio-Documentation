@@ -310,21 +310,10 @@ Now when we run "ls" we can see the comfyvol folder. This will be the folder we 
 ```bash
 docker run \
   --gpus all \
-  -it \
-  -p 80:80 \
-  -v comfyvol:/workspace \
-  ghcr.io/theartofficial/artofficialstudio:latest
-```
-
-If you plan on doing lora training, you'll need to increase the shm size that is passed to the container with this command instead
-
-```bash
-docker run \
-  --gpus all \
   --shm-size=32g \
   -it \
   -p 80:80 \
-  -v comfyvol:/workspace \
+  -v /home/theartofficial/comfyvol:/workspace \
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
