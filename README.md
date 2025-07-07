@@ -225,9 +225,9 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 ## ArtOfficial Studio Windows Auto-Launcher
 
-**If you want to just run an automated script, just download the start_aos.bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/comfyvol" to your WSL Subsystem Path. 
+**If you want to just run an automated script, just download the start_aos.bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/comfyvol" to your WSL Subsystem Path.**
 
-DO NOT USE A WINDOWS PATH MOUNT. The Windows Path is multiple times slower than using the WSL Subsystem Path. If you want access to the linux files on Windows, either use JupyterLab through the "App Links" tab on ArtOfficial Studio, or go to the path [//wsl$] in File Explorer on Windows.**
+**DO NOT USE A WINDOWS PATH MOUNT. The Windows Path is multiple times slower than using the WSL Subsystem Path. If you want access to the linux files on Windows, either use JupyterLab through the "App Links" tab on ArtOfficial Studio, or go to the path [//wsl$] in File Explorer on Windows.**
 
 Link: [start_aos.bat](https://github.com/TheArtOfficial/ArtOfficialStudio-Documentation/blob/main/start_aos.bat)
 
@@ -244,7 +244,7 @@ docker pull ghcr.io/theartofficial/artofficialstudio:latest
 
 Docker is able to use your hard drive to store all of the contianer data. The contianer is set up so all of the important ComfyUI and Training Tool data goes into the "/workspace" folder, so that is where we want to mount our volume. Make sure you do not change the :/workspace part of the command, only change the path for your volume.
 
-If you are running on linux, make sure to use a path from inside the WSL distro. If you mount to a windows volume path, you will experience performance issues and slow loading times. These issues are completely eliminated by using a path inside WSL
+If you are running on Windows, make sure to use a path from inside the WSL distro. If you mount to a windows volume path, you **will** experience performance issues and slow loading times. These issues are completely eliminated by using a path inside WSL
 
 When you first start WSL, it will be completely empty, as shown by the first "ls" command. "ls" just lists the files that are in the file system.
 create a folder inside WSL with the "mkdir" command. In this case, I used "mkdir comfyvol"
