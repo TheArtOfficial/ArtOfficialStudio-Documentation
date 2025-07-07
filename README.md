@@ -299,7 +299,7 @@ Running the container without pulling it will still update ComfyUI and all custo
 
 If your pod's driver does not support cu128, there are other versions available.
 
-To filter Pods by cuda version, use this dropdown (Cu12.8 Template won't work with Pods that have <=Cu12.7:
+To filter Pods by cuda version, use this dropdown (Cu12.8 Template won't work with Pods that have <=Cu12.7):
 ![image](https://github.com/user-attachments/assets/03a879c6-140a-44f3-a678-e5287892acaa)
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
