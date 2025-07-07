@@ -45,9 +45,12 @@ No technical background? No worries. This guide is written to walk you through e
 
 ## Paperspace Cloud GPU Installation
 
-10. [Connect Paperspace to GitHubRegistry](#1-connect-paperspace-to-githubregistry)
-11. [Deploy Container on GPU of Choice](#2-deploy-container-on-gpu-of-choice)
-12. [Connect to Application Link](#3-connect-to-application-lin)
+10. [Deploy Container on GPU of Choice](#2-deploy-container-on-gpu-of-choice)
+11. [Connect to Application Link](#3-connect-to-application-lin)
+
+## SimplePod.ai Cloud GPU Installation
+
+12. [SimplePod.ai](#simplepod-template-links)
 
 ## Using ArtOfficial Studio
 
@@ -305,7 +308,7 @@ To filter Pods by cuda version, use this dropdown (Cu12.8 Template won't work wi
 
 -   Sign in to your account at [RunPod.io](https://runpod.io).
 
-### 2. Select Proper Cuda Version
+### 2. Select Proper Cuda Version Template
 
 Cu12.8 (50xx GPUs): https://console.runpod.io/deploy?template=xhqk6am365&ref=sibibj3j
 
