@@ -22,7 +22,7 @@ No technical background? No worries. This guide is written to walk you through e
 
 1. Install Docker for Linux or Windows (one-time) or access a cloud GPU through any of the providers
 2. Run the docker container with an optional but recommended volume mounted so data is stored even when the docker container is deleted
-3. To pull the latest changes, delete the docker container (remember, all downloaded data is stored on the volume, so it won't be deleted), and run the docker container again. You now have a completely up to date instance of all the tools with all of your hard work still available\!
+3. To pull the latest changes, remove the docker container (remember, all downloaded data is stored on the volume, so it won't be deleted), pull the latest docker image, and run the docker container again. You now have a completely up to date instance of all the tools with all of your hard work still available\!
 
 # 📘 Table of Contents
 
