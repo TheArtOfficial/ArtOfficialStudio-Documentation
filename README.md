@@ -208,9 +208,7 @@ Only use this step if you are having performance issues. For some reason docker-
     processors=32
     ```
    
-**You are now ready to proceed with logging into Docker with your GitHub Token and running the ArtOfficial Studio image!**
-
----
+**You are now ready to proceed with running the ArtOfficial Studio image!**
 
 ---
 
