@@ -131,14 +131,13 @@ This guide will walk you through setting up Docker Desktop on Windows with WSL 2
 
 **Step 1: Install/Update NVIDIA Windows Drivers**
 
-This is the most crucial step. Your Windows NVIDIA drivers are what WSL 2 and Docker will use for GPU access.
+**This step isn't necessary if you already have your GPU drivers working** This is the most crucial step. Your Windows NVIDIA drivers are what WSL 2 and Docker will use for GPU access. 
 
-1.  Go to the official NVIDIA Driver Downloads page: [https://www.nvidia.com/Download/index.aspx](https://www.nvidia.com/Download/index.aspx)
-2.  Select your GPU model (e.g., GeForce RTX 3090) and operating system. Download the latest **Game Ready Driver** or **NVIDIA Studio Driver**.
-3.  Run the downloaded installer and follow the on-screen prompts. A "Clean Installation" is often recommended.
-4.  Restart your computer if prompted.
-5.  **Verify Driver Installation (Windows):** Open Command Prompt or PowerShell and type `nvidia-smi`. You should see details about your NVIDIA GPU.
-6.  **Restart Docker Desktop (if already installed):** If you already have Docker Desktop installed, restart it after updating your NVIDIA drivers to ensure it recognizes the new driver version.
+1.  Download the official NVIDIA APP [https://www.nvidia.com/en-us/software/nvidia-app/]
+2.  Download the latest **Game Ready Driver** or **NVIDIA Studio Driver** suggested for you in the app.
+3.  Restart your computer if prompted.
+4.  **Verify Driver Installation (Windows):** Open Command Prompt or PowerShell and type `nvidia-smi`. You should see details about your NVIDIA GPU.
+5.  **Restart Docker Desktop (if already installed):** If you already have Docker Desktop installed, restart it after updating your NVIDIA drivers to ensure it recognizes the new driver version.
 
 **Step 2: Install or Enable WSL 2**
 
@@ -366,12 +365,10 @@ To filter by cuda version, use this dropdown:
 
 ### 3. Create the Template:
 
--   In the template settings, select **"Docker Image"** and paste the following image URL (replace with cu126 version if necessary):
+-   In the template settings, select **"Docker Image"** and paste the following image URL (replace with cu126 or cu124 version if necessary):
     ```bash
     ghcr.io/theartofficial/artofficialstudio:latest
     ```
--   **Registry Credentials:** Ensure you enter your GitHub username and token to authenticate the container.
--   Select your credentials from the dropdown list after creating them.
 -   Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
 -   Create an Environment Variable called "RUNPOD" with the value 1. This will let the system know that you're using runpod, so that gradio will work correctly.
 
