@@ -31,34 +31,34 @@ No technical background? No worries. This guide is written to walk you through e
 
 ## Local Installation
 
-2. [What is Docker? (Beginner Friendly)](#what-is-docker-beginner-friendly)
-3. [How to Install Docker with GPU Support](#how-to-install-docker-with-gpu-support-one-time-setup)
+1. [What is Docker? (Beginner Friendly)](#what-is-docker-beginner-friendly)
+2. [How to Install Docker with GPU Support](#how-to-install-docker-with-gpu-support-one-time-setup)
     - [Windows (WSL2 + NVIDIA)](#windows-with-wsl2-and-nvidia-gpu)
     - [Linux](#linux)
-4. [How to Log in to Docker with GitHub Token](#how-to-log-in-to-docker-with-github-token-one-time-setup)
-5. [How to Run the ArtOfficial Studio Docker Image](#how-to-run-the-artofficial-studio-docker-image)
-6. [Mounting a Volume Drive to Persist Data](#-mounting-a-volume-drive-to-persist-data)
-7. [How to Restart the Docker Image Without Losing Data](#-how-to-restart-the-docker-image-without-losing-data)
+3. [How to Log in to Docker with GitHub Token](#how-to-log-in-to-docker-with-github-token-one-time-setup)
+4. [How to Run the ArtOfficial Studio Docker Image](#how-to-run-the-artofficial-studio-docker-image)
+5. [Mounting a Volume Drive to Persist Data](#-mounting-a-volume-drive-to-persist-data)
+6. [How to Restart the Docker Image Without Losing Data](#-how-to-restart-the-docker-image-without-losing-data)
 
 ## RunPod Cloud GPU Installation
 
-8. [Create a New Template](#2-create-a-new-template)
-9. [Optional - Create a Network Volume](#6-optional-create-a-network-volume)
-10. [Deploy the Pod](#7-deploy-the-pod)
+7. [Create a New Template](#2-create-a-new-template)
+8. [Optional - Create a Network Volume](#6-optional-create-a-network-volume)
+9. [Deploy the Pod](#7-deploy-the-pod)
 
 ## Paperspace Cloud GPU Installation
 
-11. [Connect Paperspace to GitHubRegistry](#1-connect-paperspace-to-githubregistry)
-12. [Deploy Container on GPU of Choice](#2-deploy-container-on-gpu-of-choice)
-13. [Connect to Application Link](#3-connect-to-application-lin)
+10. [Connect Paperspace to GitHubRegistry](#1-connect-paperspace-to-githubregistry)
+11. [Deploy Container on GPU of Choice](#2-deploy-container-on-gpu-of-choice)
+12. [Connect to Application Link](#3-connect-to-application-lin)
 
 ## Using ArtOfficial Studio
 
-14. [Using the Home Page](#app-links)
-15. [Model Downloader](#model-downloader-tab)
-16. [Training Tools](#training-tools-tab)
-17. [CivitAI Downloader](#civitai-downloader-tab)
-18. [HuggingFace Downloader](#huggingface-downloader-tab)
+13. [Using the Home Page](#app-links)
+14. [Model Downloader](#model-downloader-tab)
+15. [Training Tools](#training-tools-tab)
+16. [CivitAI Downloader](#civitai-downloader-tab)
+17. [HuggingFace Downloader](#huggingface-downloader-tab)
 
 ---
 
