@@ -144,7 +144,7 @@ Windows Subsystem for Linux (WSL) allows you to run a Linux environment directly
 
 **Step 3: Verify WSL Has GPU Access**
 
-While Docker containers bring their own CUDA libraries, installing the CUDA Toolkit _specifically for WSL_ inside your Linux distribution helps ensure that tools like `nvidia-smi` work correctly within WSL, which is a good indicator for Docker's GPU access. **Do NOT install standard Linux NVIDIA drivers inside WSL.**
+**Do NOT install standard Linux NVIDIA drivers inside WSL.**
 
 1.  **Open your WSL Linux Terminal:**
     Type `wsl` or the name of your distribution (e.g., `ubuntu`) in PowerShell or Command Prompt or open an Ubuntu Terminal from windows start menu
@@ -154,7 +154,7 @@ While Docker containers bring their own CUDA libraries, installing the CUDA Tool
     ```bash
     nvidia-smi
     ```
-    You should see details about your NVIDIA GPU. If it works, you can optionally add `/usr/lib/wsl/lib` to your `PATH` in your `~/.bashrc` (or `~/.zshrc`) for convenience:
+    You should see details about your NVIDIA GPU.
 
 **Step 4: Install Docker Desktop for Windows**
 
