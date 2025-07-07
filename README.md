@@ -32,7 +32,7 @@ No technical background? No worries. This guide is written to walk you through e
 2. [How to Install Docker with GPU Support](#how-to-install-docker-with-gpu-support-one-time-setup)
     - [Windows (WSL2 + NVIDIA)](#windows-with-wsl2-and-nvidia-gpu)
     - [Linux](#linux)
-3. [How to Log in to Docker with GitHub Token](#how-to-log-in-to-docker-with-github-token-one-time-setup)
+5. [ArtOfficial Studio Auto Run .bat File](#ArtOfficial-Studio-Windows-Auto-Launcher)
 4. [How to Run the ArtOfficial Studio Docker Image](#how-to-run-the-artofficial-studio-docker-image)
 5. [Mounting a Volume Drive to Persist Data](#-mounting-a-volume-drive-to-persist-data)
 6. [How to Restart the Docker Image Without Losing Data](#-how-to-restart-the-docker-image-without-losing-data)
