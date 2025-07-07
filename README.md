@@ -379,13 +379,13 @@ By following these steps, you'll have a fully working setup with the ArtOfficial
 
 ### Simplepod Template Links:
 
-Cu12.8: `https://dash.simplepod.ai/account/explore/65/ref-fh2t1wmai/rrit_hDt1yWltmZf7`
+Cu12.8: https://dash.simplepod.ai/account/explore/65/ref-fh2t1wmai/rrit_hDt1yWltmZf7
 
-Cu12.6: `https://dash.simplepod.ai/account/explore/66/ref-fh2t1wmai/rrit_RFitDhs1pNS1`
+Cu12.6: https://dash.simplepod.ai/account/explore/66/ref-fh2t1wmai/rrit_RFitDhs1pNS1
 
-Cu12.5: `https://dash.simplepod.ai/account/explore/67/ref-fh2t1wmai/rrit_iCtt3n219R3J`
+Cu12.5: https://dash.simplepod.ai/account/explore/67/ref-fh2t1wmai/rrit_iCtt3n219R3J
 
-Cu12.4: `https://dash.simplepod.ai/account/explore/68/ref-fh2t1wmai/rrit_TTyLUw4bUUM1`
+Cu12.4: https://dash.simplepod.ai/account/explore/68/ref-fh2t1wmai/rrit_TTyLUw4bUUM1
 
 ---
 
