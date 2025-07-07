@@ -39,7 +39,7 @@ No technical background? No worries. This guide is written to walk you through e
 
 ## RunPod Cloud GPU Installation
 
-7. [Create a New Template](#2-create-a-new-template)
+7. [Select RunPod Template](#2-select-Proper-cuda-version-template)
 8. [Optional - Create a Network Volume](#6-optional-create-a-network-volume)
 9. [Deploy the Pod](#7-deploy-the-pod)
 
