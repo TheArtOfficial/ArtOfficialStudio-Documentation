@@ -144,7 +144,7 @@ Windows Subsystem for Linux (WSL) allows you to run a Linux environment directly
 
 **Step 3: Verify WSL Has GPU Access**
 
-**Do NOT install standard Linux NVIDIA drivers inside WSL.**
+    **Do NOT install standard Linux NVIDIA drivers inside WSL.**
 
 1.  **Open your WSL Linux Terminal:**
     Type `wsl` or the name of your distribution (e.g., `ubuntu`) in PowerShell or Command Prompt or open an Ubuntu Terminal from windows start menu
