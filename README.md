@@ -67,7 +67,7 @@ No technical background? No worries. This guide is written to walk you through e
 
 ## How to Create a GitHub Classic Token for Container Access (One-time setup for all connection methods)
 
-To access my private container image hosted on GitHub Container Registry (GHCR), you need a GitHub Classic Token. DM me your GitHub username once you have a token, and I will give you access.
+To access a container image hosted on GitHub Container Registry (GHCR), you need a GitHub Classic Token.
 
 ### Steps:
 
