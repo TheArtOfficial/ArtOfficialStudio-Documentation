@@ -20,12 +20,9 @@ No technical background? No worries. This guide is written to walk you through e
 
 **General Installation steps:**
 
-1. Create a Github Account and create a token for logging into docker (one-time)
-2. DM me your Github Account Username on Patreon or Discord (one-time)
-3. Install Docker for Linux or Windows (one-time) or access a cloud GPU through any of the providers
-4. Log-in to ghcr.io docker container registry (one-time)
-5. Run the docker container with a volume mounted so data is stored even when the docker container is deleted (optional)
-6. To pull the latest changes, delete the docker container (remember, all downloaded data is stored on the volume, so it won't be deleted), and run the docker container again. You now have a completely up to date instance of all the tools with all of your hard work still available\!
+1. Install Docker for Linux or Windows (one-time) or access a cloud GPU through any of the providers
+2. Run the docker container with an optional but recommended volume mounted so data is stored even when the docker container is deleted
+3. To pull the latest changes, delete the docker container (remember, all downloaded data is stored on the volume, so it won't be deleted), and run the docker container again. You now have a completely up to date instance of all the tools with all of your hard work still available\!
 
 # 📘 Table of Contents
 
