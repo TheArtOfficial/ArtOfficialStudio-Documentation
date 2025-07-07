@@ -221,14 +221,6 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 ---
 
-## How to Log in to Docker with GitHub Token (One-time setup)
-
-```bash
-docker login ghcr.io -u YOUR_GITHUB_USERNAME -p YOUR_GITHUB_TOKEN
-```
-
-Replace YOUR_GITHUB_USERNAME and YOUR_GITHUB_TOKEN with your GitHub credentials.
-
 ## First Time Setup Ends Here
 
 ---
