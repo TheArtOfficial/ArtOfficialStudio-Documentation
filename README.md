@@ -312,7 +312,7 @@ To filter Pods by cuda version, use this dropdown (Cu12.8 Template won't work wi
 
 ### 2. Select Proper Cuda Version Template
 
-Cu12.8 (50xx GPUs): https://console.runpod.io/deploy?template=xhqk6am365&ref=sibibj3j
+Cu12.8: https://console.runpod.io/deploy?template=xhqk6am365&ref=sibibj3j
 
 Cu12.6: https://console.runpod.io/deploy?template=gyub8b38nt&ref=sibibj3j
 
