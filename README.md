@@ -227,7 +227,7 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 **If you want to just run an automated script, just download the start_aos.bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/comfyvol" to your WSL Subsystem Path.**
 
-**DO NOT USE A WINDOWS PATH MOUNT. The Windows Path is multiple times slower than using the WSL Subsystem Path. If you want access to the linux files on Windows, either use JupyterLab through the "App Links" tab on ArtOfficial Studio, or go to the path [//wsl$] in File Explorer on Windows.**
+**DO NOT USE A WINDOWS PATH MOUNT. The Windows Path is multiple times slower than using the WSL Subsystem Path. If you want access to the linux files on Windows, either use JupyterLab through the "App Links" tab on ArtOfficial Studio, or go to the path `//wsl$` in File Explorer on Windows.**
 
 Link: [start_aos.bat](https://github.com/TheArtOfficial/ArtOfficialStudio-Documentation/blob/main/start_aos.bat)
 
@@ -379,13 +379,13 @@ By following these steps, you'll have a fully working setup with the ArtOfficial
 
 ### Simplepod Template Links:
 
-Cu12.8: https://dash.simplepod.ai/account/explore/65/ref-fh2t1wmai/rrit_hDt1yWltmZf7
+Cu12.8: `https://dash.simplepod.ai/account/explore/65/ref-fh2t1wmai/rrit_hDt1yWltmZf7`
 
-Cu12.6: https://dash.simplepod.ai/account/explore/66/ref-fh2t1wmai/rrit_RFitDhs1pNS1
+Cu12.6: `https://dash.simplepod.ai/account/explore/66/ref-fh2t1wmai/rrit_RFitDhs1pNS1`
 
-Cu12.5: https://dash.simplepod.ai/account/explore/67/ref-fh2t1wmai/rrit_iCtt3n219R3J
+Cu12.5: `https://dash.simplepod.ai/account/explore/67/ref-fh2t1wmai/rrit_iCtt3n219R3J`
 
-Cu12.4: https://dash.simplepod.ai/account/explore/68/ref-fh2t1wmai/rrit_TTyLUw4bUUM1
+Cu12.4: `https://dash.simplepod.ai/account/explore/68/ref-fh2t1wmai/rrit_TTyLUw4bUUM1`
 
 ---
 
