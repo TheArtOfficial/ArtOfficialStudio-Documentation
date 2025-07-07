@@ -344,26 +344,8 @@ By following these steps, you'll have a fully working setup with the ArtOfficial
 
 # Paperspace Installation
 
-### 1. **Connect Paperspace to GitHubRegistry**
+### 1. **Deploy Container on GPU of Choice**
 
--   Click on your profile in the top right and select "Team Settings"
-
-![image](https://github.com/user-attachments/assets/136ba2af-8df7-434a-bb9a-5976d89319ae)
-
--   Go to the "Containers" Tab, select the "GitHub Container Registry" from the dropdown, and hit "NEXT"
-
-![image](https://github.com/user-attachments/assets/61b6359e-2ff7-4112-892b-e29c96491c45)
-
--   Fill out the info as shown below. Hit "Test Connection" to make sure your access to the github repo is available
-
-![Screenshot from 2025-04-25 13-03-58](https://github.com/user-attachments/assets/23b25418-0e63-4374-9c76-55275b24bc6c)
-
-### 2. **Deploy Container on GPU of Choice**
-
--   Select which GPU to deploy in the dropdown.
--   Give the container a nickname
--   Select "Private container registry"
--   Select the Container Registry you set up in the previous step
 -   use the docker image that is compatible with your GPU
     `ghcr.io/theartofficial/artofficialstudio:latest`  
     `ghcr.io/theartofficial/artofficialstudio:cu126latest`
@@ -376,7 +358,7 @@ By following these steps, you'll have a fully working setup with the ArtOfficial
 
 ![image](https://github.com/user-attachments/assets/74ea9b96-a6d5-4b0b-a2da-703a30a342b4)
 
-### 3. **Connect to Application Link**
+### 2. **Connect to Application Link**
 
 -   Once you see tensorboard messages at the end of the log, your instance is ready to go!
 
@@ -385,6 +367,20 @@ By following these steps, you'll have a fully working setup with the ArtOfficial
 -   From the console dashboard, click the "Endpoint" Link, and you will be connected to the App Links page of the application!
 
 ![image](https://github.com/user-attachments/assets/68e28f57-103c-48d9-982f-f0df5509c25a)
+
+---
+
+# Simplepod.ai 
+
+### Simplepod Template Links:
+
+Cu12.8: https://dash.simplepod.ai/account/explore/65/ref-fh2t1wmai/rrit_hDt1yWltmZf7
+
+Cu12.6: https://dash.simplepod.ai/account/explore/66/ref-fh2t1wmai/rrit_RFitDhs1pNS1
+
+Cu12.5: https://dash.simplepod.ai/account/explore/67/ref-fh2t1wmai/rrit_iCtt3n219R3J
+
+Cu12.4: https://dash.simplepod.ai/account/explore/68/ref-fh2t1wmai/rrit_TTyLUw4bUUM1
 
 ---
 
