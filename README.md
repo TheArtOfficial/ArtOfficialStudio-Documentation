@@ -29,9 +29,6 @@ No technical background? No worries. This guide is written to walk you through e
 
 # 📘 Table of Contents
 
-1. [How to Create a GitHub Classic Token for Container Access](#how-to-create-a-github-classic-token-for-container-access-one-time-setup-for-all-connection-methods)
-    - [Steps](#steps)
-
 ## Local Installation
 
 2. [What is Docker? (Beginner Friendly)](#what-is-docker-beginner-friendly)
@@ -62,28 +59,6 @@ No technical background? No worries. This guide is written to walk you through e
 16. [Training Tools](#training-tools-tab)
 17. [CivitAI Downloader](#civitai-downloader-tab)
 18. [HuggingFace Downloader](#huggingface-downloader-tab)
-
----
-
-## How to Create a GitHub Classic Token for Container Access (One-time setup for all connection methods)
-
-To access a container image hosted on GitHub Container Registry (GHCR), you need a GitHub Classic Token.
-
-### Steps:
-
-1. Go to [https://github.com/settings/tokens](https://github.com/settings/tokens)
-2. Log in to your GitHub account. If you do not have one, create one.
-3. Go to **Settings**
-4. Go to the **Developer Settings** on the far left menu (should be all the way at the bottom)
-5. Click Personal Access Tokens --> "Tokens (classic)" on the left side.
-6. Click "Generate new token" → "Generate New Token (Classic)"
-7. Give it a name like Docker Access
-8. Set expiration date (optional)
-9. Under scopes, check: **read:packages** and **repo (all checkboxes)**
-   ![Screenshot from 2025-04-25 19-36-18](https://github.com/user-attachments/assets/edbb9250-da96-49bb-ade2-72e2ba95d7f9)
-
-10. Click **Generate Token**
-11. Copy and save your token securely. You won't be able to see it again!
 
 ---
 
@@ -357,48 +332,12 @@ To filter by cuda version, use this dropdown:
 
 -   Sign in to your account at [RunPod.io](https://runpod.io).
 
-### 2. Create a New Template:
+### 2. Select Proper Cuda Version
 
--   Navigate to **My Templates** and click **+ New Template**.
+Cu12.8 (50xx GPUs): https://console.runpod.io/deploy?template=xhqk6am365&ref=sibibj3j
 
-![Screenshot from 2025-04-23 18-04-15](https://github.com/user-attachments/assets/684e9fee-0852-4072-a37a-5a5783ab6467)
+Cu12.6: https://console.runpod.io/deploy?template=gyub8b38nt&ref=sibibj3j
 
-### 3. Create the Template:
-
--   In the template settings, select **"Docker Image"** and paste the following image URL (replace with cu126 or cu124 version if necessary):
-    ```bash
-    ghcr.io/theartofficial/artofficialstudio:latest
-    ```
--   Only port necessary to expose is 80, the rest of the applications can be launched from the main control panel!
--   Create an Environment Variable called "RUNPOD" with the value 1. This will let the system know that you're using runpod, so that gradio will work correctly.
-
-![Screenshot from 2025-04-25 09-59-27](https://github.com/user-attachments/assets/1bbdb065-bf9b-4862-ae88-803146e03884)
-![image](https://github.com/user-attachments/assets/f8232297-d4bd-42c6-9e78-02539263ca2c)
-
-### 4. Save the Template:
-
--   Click **Save Template** once everything is correct.
-
-### 5. Optional - Create a Network Volume:
-
--   This step is not necessary but is highly recommended to avoid redownloading files every time.
--   Navigate to **Storage** in the left menu.
--   Choose the options that best suit you. The **Europe datacenter** tends to have the best performance, but select what works best for you.
-
-![Screenshot from 2025-04-24 07-01-50](https://github.com/user-attachments/assets/41e459fb-486a-4b66-89f0-177a0d2e0b2f)
-
-### 6. Deploy the Pod:
-
--   Go to **Pods** and click **+ Deploy** or, if using a network volume, deploy from it.
--   Ensure you have the correct filter settings for the pod:
-
-![Screenshot from 2025-04-24 07-06-59](https://github.com/user-attachments/assets/050780c1-af6a-4703-a553-59ba68ab1a99)
-
--   Select the GPU (For this example, we use a 5090).
-    -   For most workflows, **16GB of VRAM** is sufficient. Some might require **24GB**, especially for 720p video generation.
--   Choose **Change Template** and select the template created earlier.
-
-![Screenshot from 2025-04-24 07-09-20](https://github.com/user-attachments/assets/823c81fe-6596-44fa-8525-33b372bd7f44)
 
 ### 7. Deploy On-Demand:
 
