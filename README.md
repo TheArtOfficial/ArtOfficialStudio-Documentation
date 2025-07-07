@@ -297,23 +297,9 @@ Running the container without pulling it will still update ComfyUI and all custo
 
 # Runpod Installation
 
-If your pod's driver does not support cu128, there are other versions available. Simply swap
+If your pod's driver does not support cu128, there are other versions available.
 
-`ghcr.io/theartofficial/artofficialstudio:latest`
-
-for one of the following:
-
-`ghcr.io/theartofficial/artofficialstudio:cu126latest`
-
-`ghcr.io/theartofficial/artofficialstudio:cu125latest`
-
-`ghcr.io/theartofficial/artofficialstudio:cu124latest`
-
-For 50xx series, cu128 is required.
-
-The 4090s on runpod for example, only support cu12.4 at the time of writing this.
-
-To filter by cuda version, use this dropdown:
+To filter Pods by cuda version, use this dropdown (Cu12.8 Template won't work with Pods that have <=Cu12.7:
 ![image](https://github.com/user-attachments/assets/03a879c6-140a-44f3-a678-e5287892acaa)
 
 ## How to Install the Container on a Cloud GPU with RunPod (Process for other cloud services should be similar)
