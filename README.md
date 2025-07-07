@@ -262,7 +262,7 @@ docker run \
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
-Replace the path with your actual folder location.
+Replace the "/home/theartofficial/comfyvol" path with your actual folder location. Should be exactly the same, but replace "theartofficial" with your linux username.
 
 Access via browser:  
 http://localhost:80
