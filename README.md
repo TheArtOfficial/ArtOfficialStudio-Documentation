@@ -78,6 +78,7 @@ If your Nvidia Driver does not support cu128, there are other cuda versions avai
 
 Nvidia 50xx series requires cu128, which is why that is my official release. Drivers are backward compatible, so there is no reason not to update to the latest driver that supports the latest CUDA version. But for those who cannot, the cu126 or cu125 version should work the same.
 
+
 ---
 
 ## What is Docker? (Beginner Friendly)
@@ -89,6 +90,7 @@ Think of it like this:
 1. You download an "app box"
 2. You run the box
 3. The app inside just works — no installs, no errors, no dependencies
+
 
 ---
 
@@ -113,6 +115,7 @@ This guide will walk you through setting up Docker Desktop on Windows with WSL 2
 3.  Restart your computer if prompted.
 4.  **Verify Driver Installation (Windows):** Open Command Prompt or PowerShell and type `nvidia-smi`. You should see details about your NVIDIA GPU.
 5.  **Restart Docker Desktop (if already installed):** If you already have Docker Desktop installed, restart it after updating your NVIDIA drivers to ensure it recognizes the new driver version.
+
 
 **Step 2: Install or Enable WSL 2**
 
@@ -142,6 +145,7 @@ Windows Subsystem for Linux (WSL) allows you to run a Linux environment directly
     ```
     You should see your installed Linux distribution (e.g., Ubuntu) listed with `VERSION` as `2`. If it's version 1, you may need to convert it (e.g., `wsl --set-version Ubuntu 2`).
 
+
 **Step 3: Verify WSL Has GPU Access**
 
 Do NOT install standard Linux NVIDIA drivers inside WSL.
@@ -156,11 +160,13 @@ Do NOT install standard Linux NVIDIA drivers inside WSL.
     ```
     You should see details about your NVIDIA GPU.
 
+
 **Step 4: Install Docker Desktop for Windows**
 
 1.  Download Docker Desktop from the official website: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 2.  Run the installer. During installation, ensure you **select the "Use WSL 2 instead of Hyper-V (recommended)" option** if prompted, or ensure it's configured to use the WSL 2 backend.
 3.  After installation, Docker Desktop might require a restart.
+
 
 **Step 5: Configure Docker Desktop for WSL Integration**
 
@@ -171,6 +177,7 @@ Do NOT install standard Linux NVIDIA drivers inside WSL.
 5.  In the list below ("Enable integration with additional distros"), make sure the toggle for your installed Linux distribution (e.g., `Ubuntu`) is **ON**.
     ![Docker WSL Integration Example](https://github.com/user-attachments/assets/7ce7ecd0-d591-4ecd-a7ad-9c526bb8523d)
 6.  Click "Apply & Restart" if you made any changes.
+
 
 **Step 6: Verify GPU Access in Docker**
 
@@ -184,9 +191,6 @@ This step confirms Docker can use your GPU via WSL 2.
     _(You can find available `nvidia/cuda` tags on Docker Hub. For example, if your driver supports CUDA 12.9, `nvidia/cuda:12.9.0-base-ubuntu22.04` would be suitable)._
 3.  If this command runs successfully and outputs the `nvidia-smi` details from _within the container_, your Docker GPU setup is working! If you see errors, re-check the previous steps, especially Windows NVIDIA drivers, WSL `nvidia-smi` functionality, and Docker Desktop WSL integration settings.
 
-**Important Note on the original guide's `nvidia-container-toolkit` step:**
-
-The original ArtOfficial Studio guide mentioned installing `nvidia-container-toolkit` and running `sudo nvidia-ctk runtime configure --runtime=docker` inside the WSL2 Ubuntu shell. For **Docker Desktop on Windows with WSL 2, these commands are generally NOT needed and NOT recommended** to be run inside your user WSL distribution (e.g., Ubuntu). Docker Desktop manages the NVIDIA container runtime integration itself. Running these commands manually can be redundant or potentially cause conflicts. The `docker run --rm --gpus all ... nvidia-smi` test is the correct way to verify Docker Desktop's GPU integration.
 
 **Step 7: Troubleshooting Speed & Performance Issues in Windows**
 
@@ -207,8 +211,9 @@ Only use this step if you are having performance issues. For some reason docker-
     memory=80GB
     processors=32
     ```
-   
+
 **You are now ready to proceed with running the ArtOfficial Studio image!**
+
 
 ---
 
@@ -217,9 +222,12 @@ Only use this step if you are having performance issues. For some reason docker-
 [Ubuntu tutorial: How to Run Docker with GPU?](https://docs.docker.com/engine/install/)  
 Official Docker install docs: [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 
+
 ---
 
+
 ## First Time Setup Ends Here
+
 
 ---
 
@@ -231,6 +239,7 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 Link: [start_aos.bat](https://github.com/TheArtOfficial/ArtOfficialStudio-Documentation/blob/main/start_aos.bat)
 
+
 ## Download the Docker Image
 
 To deploy the container faster locally, it is best practice to download the container first and then run it locally. do so with this command:
@@ -238,6 +247,7 @@ To deploy the container faster locally, it is best practice to download the cont
 ```
 docker pull ghcr.io/theartofficial/artofficialstudio:latest
 ```
+
 
 ## Mounting a Volume Drive to Persist Data
 
@@ -268,6 +278,7 @@ Replace the "/home/theartofficial/comfyvol" path with your actual folder locatio
 Access via browser:  
 http://localhost:80
 
+
 ---
 
 ## How to Restart the Docker Image Without Losing Data
@@ -291,6 +302,7 @@ docker pull ghcr.io/theartofficial/artofficialstudio:latest
 ```
 
 Running the container without pulling it will still update ComfyUI and all custom nodes, but you won't have any of the new ArtOfficial Studio features released, so if you want to try out a new model or new training too that's been released, make sure to pull the image again.
+
 
 ---
 
@@ -344,6 +356,7 @@ Cu12.4: https://console.runpod.io/deploy?template=6pa9vb4956&ref=sibibj3j
 
 By following these steps, you'll have a fully working setup with the ArtOfficial Studio container running on your RunPod cloud GPU!
 
+
 ---
 
 # Paperspace Installation
@@ -372,6 +385,7 @@ By following these steps, you'll have a fully working setup with the ArtOfficial
 
 ![image](https://github.com/user-attachments/assets/68e28f57-103c-48d9-982f-f0df5509c25a)
 
+
 ---
 
 # Simplepod.ai 
@@ -385,6 +399,7 @@ Cu12.6: https://dash.simplepod.ai/account/explore/66/ref-fh2t1wmai/rrit_RFitDhs1
 Cu12.5: https://dash.simplepod.ai/account/explore/67/ref-fh2t1wmai/rrit_iCtt3n219R3J
 
 Cu12.4: https://dash.simplepod.ai/account/explore/68/ref-fh2t1wmai/rrit_TTyLUw4bUUM1
+
 
 ---
 
