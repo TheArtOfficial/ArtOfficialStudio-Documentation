@@ -225,14 +225,13 @@ Official Docker install docs: [https://docs.docker.com/engine/install/](https://
 
 ## ArtOfficial Studio Windows Auto-Launcher
 
-**If you want to just run an automated script, just download the start_aos.bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/comfyvol" to your WSL Subsystem Path.**
+**If you want to just run an automated script, just download the start_aos.bat file at the top of the page and follow the instructions inside it! This will automate all the commands below for you, just remember to change "/home/theartofficial/comfyvol" to use your username.**
 
 **DO NOT USE A WINDOWS PATH MOUNT. The Windows Path is multiple times slower than using the WSL Subsystem Path. If you want access to the linux files on Windows, either use JupyterLab through the "App Links" tab on ArtOfficial Studio, or go to the path `//wsl$` in File Explorer on Windows.**
 
 Link: [start_aos.bat](https://github.com/TheArtOfficial/ArtOfficialStudio-Documentation/blob/main/start_aos.bat)
 
 ## Download the Docker Image
-
 
 To deploy the container faster locally, it is best practice to download the container first and then run it locally. do so with this command:
 
