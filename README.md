@@ -106,7 +106,7 @@ This guide will walk you through setting up Docker Desktop on Windows with WSL 2
 
 **Step 1: Install/Update NVIDIA Windows Drivers**
 
-**This step isn't necessary if you already have your GPU drivers working** This is the most crucial step. Your Windows NVIDIA drivers are what WSL 2 and Docker will use for GPU access. 
+**This step isn't necessary if you already have your GPU drivers working.** Your Windows NVIDIA drivers are what WSL 2 and Docker will use for GPU access. 
 
 1.  Download the official NVIDIA APP [https://www.nvidia.com/en-us/software/nvidia-app/]
 2.  Download the latest **Game Ready Driver** or **NVIDIA Studio Driver** suggested for you in the app.
