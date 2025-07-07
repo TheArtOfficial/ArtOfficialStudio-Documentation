@@ -330,6 +330,10 @@ Cu12.8 (50xx GPUs): https://console.runpod.io/deploy?template=xhqk6am365&ref=sib
 
 Cu12.6: https://console.runpod.io/deploy?template=gyub8b38nt&ref=sibibj3j
 
+Cu12.5: https://console.runpod.io/deploy?template=w15kdsstbq&ref=sibibj3j
+
+Cu12.4: https://console.runpod.io/deploy?template=6pa9vb4956&ref=sibibj3j
+
 
 ### 7. Deploy On-Demand:
 
