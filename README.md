@@ -293,7 +293,7 @@ Then rerun the same Docker command as before.
 
 You're all set! Dive into ArtOfficial Studio and explore the frontier of AI creation.
 
-## How to update your Docker Image to the latest
+## How to Update your Docker Image to the Latest
 
 Just run the pull command again
 
