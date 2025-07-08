@@ -268,7 +268,7 @@ docker run \
   --gpus all \
   --shm-size=32g \
   -it \
-  -p 80:80 \
+  -p 8080:80 \
   -v /home/theartofficial/comfyvol:/workspace \
   ghcr.io/theartofficial/artofficialstudio:latest
 ```
@@ -276,7 +276,7 @@ docker run \
 Replace the "/home/theartofficial/comfyvol" path with your actual folder location. Should be exactly the same, but replace "theartofficial" with your linux username.
 
 Access via browser:  
-http://localhost:80
+http://localhost:8080
 
 
 ---
