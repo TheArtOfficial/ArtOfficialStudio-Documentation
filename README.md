@@ -303,6 +303,22 @@ docker pull ghcr.io/theartofficial/artofficialstudio:latest
 
 Running the container without pulling it will still update ComfyUI and all custom nodes, but you won't have any of the new ArtOfficial Studio features released, so if you want to try out a new model or new training too that's been released, make sure to pull the image again.
 
+## Run the Container Again
+
+```bash
+docker run \
+  --gpus all \
+  --shm-size=32g \
+  -it \
+  -p 80:80 \
+  -v /home/theartofficial/comfyvol:/workspace \
+  ghcr.io/theartofficial/artofficialstudio:latest
+```
+
+Replace the "/home/theartofficial/comfyvol" path with your actual folder location. Should be exactly the same, but replace "theartofficial" with your linux username.
+
+Access via browser:  
+http://localhost:80
 
 ---
 
