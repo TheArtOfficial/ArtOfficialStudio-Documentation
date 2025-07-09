@@ -99,6 +99,7 @@ Think of it like this:
 ### Windows (with WSL2 and NVIDIA GPU)
 
 **Click the image below for windows install tutorial:**
+
 [![Windows Install Guide for ArtOfficial Studio](https://img.youtube.com/vi/Na5BEQWFmic/0.jpg)](https://youtu.be/Na5BEQWFmic)
 
 This guide will walk you through setting up Docker Desktop on Windows with WSL 2 to enable GPU acceleration for ArtOfficial Studio. This allows ArtOfficial Studio to leverage your NVIDIA graphics card for AI tasks.
